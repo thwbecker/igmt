@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Software requirements</TITLE>
+<META NAME="description" CONTENT="Software requirements">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="manual.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html147"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html143"
+  HREF="manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html137"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html145"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html148"
+  HREF="node5.html">Installation and configuration</A>
+<B> Up:</B> <A NAME="tex2html144"
+  HREF="manual.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html138"
+  HREF="node3.html">Credits and history</A>
+ &nbsp <B>  <A NAME="tex2html146"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000"></A><A NAME="req"></A>
+<BR>
+Software requirements
+</H1>
+
+<P>
+The current version of iGMT is intended for use on UNIX
+systems<A NAME="tex2html4"
+  HREF="footnode.html#foot447"><SUP>4</SUP></A>  and was developed running IRIX 6.3-6.5.
+However, it should be easily modified to run on other hardware
+platforms without much effort since all the software that iGMT relies
+on or an equivalent is available for most operating systems. This is
+especially the case for Macs and PCs whereas we have no experience
+with the ported programs.  <A NAME="tex2html5"
+  HREF="footnode.html#foot31"><SUP>5</SUP></A>
+<P>
+The iGMT script package that comes with this documentation, some
+example plots and small datasets are available at the iGMT home page
+<BR>
+<P>
+<TT>http://www.seismology.harvard.edu/<IMG
+ WIDTH="42" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sim$">becker/igmt/</TT>
+<BR>
+<P>
+These website are also the places to check for updates, bug reports
+etc. iGMT assumes that you have the following software installed and
+accessible either via the user's <TT>$path</TT> variable or the binary
+paths set in <TT>igmt_configure.tcl</TT> or the <TT>igmt_siteconfig.tcl</TT> file (see sec.&nbsp;<A HREF="node5.html#install">4</A>). This software
+requirement should be automatically fulfilled if you are running a
+LINUX system from any of the major distribution, e.g. Redhat 7.1. If
+any of this does not make sense to you, please ask your system
+administrator.
+
+<P>
+<DL>
+<DT><STRONG>Tcl/Tk:</STRONG></DT>
+<DD>iGMT is mostly written in Tcl/Tk, a
+  convenient language for constructing graphical user interfaces.
+
+<P>
+The Tcl script language and the Tk toolkit (<A
+ HREF="node30.html#ousterhout">Ousterhout, 1993</A>) are
+  currently available at
+  <TT>http://www.tcltk.com/</TT> or <TT>    http://dev.ajubasolutions.com/</TT>. Version 8.0 of Tcl/Tk was used for
+  developing, older versions may work as well. From the newer releases,
+  we found that 8.2.1 gave problems while 8.3 seems to work fine.
+  Tcl is available for UNIX, PC, Mac and other platforms.
+
+<P>
+</DD>
+<DT><STRONG>GMT:</STRONG></DT>
+<DD>The generic mapping tools (<A NAME="tex2html149"
+  HREF="node30.html#wessel98">Wessel and Smith, 1998</A>,<A NAME="tex2html150"
+  HREF="node30.html#wessel95">1995</A>,<A NAME="tex2html151"
+  HREF="node30.html#gmt">1991</A>) do the
+  mapping part, they are called by a script file produced from within iGMT. 
+  The source code distribution of GMT as well as documentation
+  is available at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.soest.hawaii.edu/wessel/gmt.html</TT>.</DIV>
+
+<BR>
+GMT itself has
+  some additional software requirements, such as the availability of the netcdf library
+  (see the GMT documentation). 
+
+<P>
+iGMT is now set for GMT version 3.4.x by default.  If you are running
+  an older version (3.<IMG
+ WIDTH="38" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$x$">, where at the moment <IMG
+ WIDTH="78" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$x=0,$"> 1, 2, 3) change
+  the <TT>gmt_version</TT> variable in iGMT (see sec.&nbsp;<A HREF="node5.html#install">4</A>).
+  For <IMG
+ WIDTH="73" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$x&gt;0$">, you will furthermore have to make sure that the
+  environment <TT>$GMTHOME</TT> variable is set and accessible by your
+  batch-shell (<TT>ksh</TT> by default).  You can set different binary
+  paths depending on the version of GMT you are running. iGMT switches
+  between them if the user changes GMT versions during runtime.
+
+<P>
+We have included the option to change the binary directories
+  according to the GMT version that is selected. To modify these
+  optional directories, set the iGMT variables <TT>    higher_version_gmtbins</TT> and <TT>lower_version_gmtbins</TT> (see
+  sec.&nbsp;<A HREF="node5.html#install">4</A>).
+
+<P>
+A particular problem that arose for GMT versions larger than 3.0 is
+  the changed Postscript handling. To achieve nice conversions from
+  GMT-Postscript output, the new <TT>.gmtdefaults</TT> file has to
+  include ``A4+'' as <TT>PAPER_MEDIA</TT>. iGMT handles this by copying
+  its preferred version of GMT parameter settings into the working
+  directory at the beginning of a session. If the GMT version is then
+  changed during a session, the different <TT>.gmtdefaults</TT> version
+  of 3.0 and 3.4, say, might confuse the GMT commands and output may
+  fail. It is therefore best to keep the GMT version constant during
+  an iGMT run.
+
+<P>
+Also see our comments on
+<BR>
+<P>
+<TT>http://op.gfz-potsdam.de/igmt/gmt_versions.html</TT>.
+
+<P>
+</DD>
+<DT><STRONG>gawk:</STRONG></DT>
+<DD>The <TT>awk</TT> command family (<TT>awk</TT> itself, the
+  math-included version <TT>nawk</TT>, and usually the GNU-version <TT>    gawk</TT>) is available on all UNIX systems such as AIX, IRIX,
+  SOLARIS, HPUX or LINUX. AWK or some GNU flavors of it such as <TT>    gawk</TT>, which is used by iGMT per default,  runs also on PCs and
+  Macs. (To change the default <TT>awk</TT>-type binary, modify the iGMT
+  variable <TT>our_awk</TT> (see sec.&nbsp;<A HREF="node5.html#install">4</A>).  If <TT>gawk</TT> is
+  not available, use
+  <TT>nawk</TT> instead of simple <TT>awk</TT> since our scripts might
+  rely on math functions which might or might not be accessible from
+  within <TT>awk</TT>.)
+
+<P>
+</DD>
+<DT><STRONG>ghostview:</STRONG></DT>
+<DD>iGMT uses the GNU software <TT>ghostview</TT> as a
+  postscript display program.  A possible postscript viewer
+  alternative would be <TT>showps</TT> or <TT>ghostscript</TT>, available
+  for PC and Mac (change iGMT variable <TT>psviewer</TT> (see
+  sec.&nbsp;<A HREF="node5.html#install">4</A>)).  iGMT works fine without any postscript
+  displayer at all as long as you do not need to view the PS files
+  that GMT produces before printing them.
+
+<P>
+</DD>
+<DT><STRONG>convert:</STRONG></DT>
+<DD>The <TT>convert</TT> tool of the ImageMagick software
+<BR>
+<P>
+<TT>http://www.wizards.dupont.com/cristy/ImageMagick.html</TT>
+<BR>
+<P>
+is used to convert from PS to the GIF format so that GMT output can
+  be judged right away. (iGMT variable <TT>ps_to_gif_converter</TT>
+  (see sec.&nbsp;<A HREF="node5.html#install">4</A>).)
+
+<P>
+You might as well use <TT>ghostscript</TT> to convert from postscript
+  or change the graphic format that is used for previewing to
+  something completely different. <A NAME="tex2html6"
+  HREF="footnode.html#foot449"><SUP>6</SUP></A>  iGMT works fine without a converting
+  tool even though you might get an error message when you use ``Map
+  it!''.
+
+<P>
+</DD>
+</DL>
+
+<P>
+If you have installed the tools mentioned above you should be ready to
+use the basic version of iGMT. While the requirements above might seem
+complicated, it should be kept in mind that nowadays most UNIX or
+LINUX systems come with all of the above except GMT when the system
+software is installed. GMT, on the other hand, is widely in use in the
+earth sciences already. In addition, all of the software needed to run
+iGMT is freeware or shareware of some kind and most of it is subjected
+to an open developing policy.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html147"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html143"
+  HREF="manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html137"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html145"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html148"
+  HREF="node5.html">Installation and configuration</A>
+<B> Up:</B> <A NAME="tex2html144"
+  HREF="manual.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html138"
+  HREF="node3.html">Credits and history</A>
+ &nbsp <B>  <A NAME="tex2html146"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

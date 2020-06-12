@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Polygon data</TITLE>
+<META NAME="description" CONTENT="Polygon data">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html215"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html211"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html207"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html213"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html216"
+  HREF="node10.html">Usage of iGMT</A>
+<B> Up:</B> <A NAME="tex2html212"
+  HREF="node7.html">Datasets handled by iGMT</A>
+<B> Previous:</B> <A NAME="tex2html208"
+  HREF="node8.html">Raster data</A>
+ &nbsp <B>  <A NAME="tex2html214"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00062000000000000000">
+Polygon data</A>
+</H2>
+
+<P>
+Some example handling procedures for polygon data are included as well:
+
+<P>
+<DL>
+<DT><STRONG>Plate boundary data:</STRONG></DT>
+<DD>The plate boundaries as given by
+  <A
+ HREF="node30.html#demets90">DeMets et&nbsp;al. (1990)</A> are part of the iGMT distribution as the file <TT>    nuvel.yx</TT> in a slightly modified form. Any polygon data file
+  supported by <TT>psxy</TT> can be substituted for this data set.
+
+<P>
+</DD>
+<DT><STRONG>Hotspot locations:</STRONG></DT>
+<DD>iGMT uses a list of hotspots compiled by
+  <A
+ HREF="node30.html#steinberger00b">Steinberger (2000)</A> to plot their location and a name tag, if
+  selected.
+
+<P>
+</DD>
+<DT><STRONG>Volcano locations:</STRONG></DT>
+<DD>The Smithsonian Institution Global Volcanism
+  Program's list of volcanoes (<A
+ HREF="node30.html#simkin94">Simkin and Siebert, 1994</A>) is supported
+  in the form found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.volcano.si.edu/gvp/volcdata/index.htm</TT>.</DIV>
+
+<BR>
+As for the hotspot data, the user can select a symbol, the color and
+  toggle a name tag. A version of this list as of April 1998 is
+  included. If you want to install an update, just download the data
+  from the web and replace the adequate file. The same holds true for
+  the earthquake catalogs since iGMT was programmed to handle the
+  original data.
+
+<P>
+</DD>
+<DT><STRONG>CMT fault plane solutions:</STRONG></DT>
+<DD>iGMT uses <TT>psvelomeca</TT> from the
+  GMT supplements package to plot the double couple part of the
+  Harvard CMT centroid moment tensor solutions (e.g. <A
+ HREF="node30.html#cmtreview">Dziewonski and Woodhouse, 1983</A>) as found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.seismology.harvard.edu/CMTsearch.html</TT>.</DIV>
+
+<BR>
+A list of all events in the catalog of the first 60 days of 1998 is
+  included as an example.
+
+<P>
+</DD>
+<DT><STRONG>Significant earthquakes:</STRONG></DT>
+<DD><A
+ HREF="node30.html#ngdc_sig">Dunbar et&nbsp;al. (1997)</A> have compiled a list
+  of significant earthquakes starting 2000 B.C., their catalog is accessible at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.ngdc.noaa.gov/seg/hazard/sigintro.html</TT>.</DIV>
+
+<BR>
+After
+  quoting all lines without data by inserting a hash sign ("# "), the
+  format produced by this engine can be read directly into iGMT.
+  (Internally, all that iGMT does is to use awk to check if lines are
+  quoted and for exporting of the relevant columns.) iGMT plots only
+  earthquakes that have a magnitude assigned, you might want to change
+  the relevant <TT>awk</TT> lines in <TT>igmt_plotting.tcl</TT>.
+
+<P>
+</DD>
+<DT><STRONG>PDE earthquakes:</STRONG></DT>
+<DD>The United States Geological Survey keeps
+  different hypocenter catalogs at the National Earthquake Information
+  Center
+<BR>  <DIV ALIGN="CENTER">
+URL: <TT>http://wwwneic.cr.usgs.gov/neis/epic/epic_global.html</TT>).</DIV>
+
+<BR>
+The ``Screen File Format'' can be read by iGMT.
+
+<P>
+</DD>
+<DT><STRONG>Slab contours:</STRONG></DT>
+<DD><A
+ HREF="node30.html#gudmundsson98">Gudmundsson and Sambridge (1998)</A> define contours of the
+  upper edge of subducting slabs from the relocated hypocentres of
+  <A
+ HREF="node30.html#engdahl98">Engdahl et&nbsp;al. (1998)</A>.
+  These seismicity contours are available from
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://rses.anu.edu.au/seismology/projects/RUM/rum_download.html</TT>,</DIV>
+
+<BR>
+we have included them in a format readable by GMT.
+
+<P>
+</DD>
+<DT><STRONG>Velocity vectors:</STRONG></DT>
+<DD>Simon McClusky provided a routine that
+  handles velocity solution plotting using <TT>psvelomeca</TT>. A typical
+  application would be the mapping of results from GPS studies such as
+  the <TT>gps.vel</TT> global data example we have included.
+
+<P>
+</DD>
+<DT><STRONG>Vector fields:</STRONG></DT>
+<DD>Given two user-supplied GMT <TT>grd</TT> files with
+  <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_x$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$v_y$"> components of a vector field <IMG
+ WIDTH="13" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$v$">, iGMT plots this
+  field using <TT>grdvector</TT>.<A NAME="tex2html9"
+  HREF="footnode.html#foot210"><SUP>9</SUP></A>  You can change the color and width of the
+  vectors via the normal color and linewidth menus for polygon data.
+  Additional parameters can be changed under ``Data
+  parameters''/``Vector field parameters''.
+
+<P>
+</DD>
+<DT><STRONG>World Stress Map:</STRONG></DT>
+<DD>The World Stress Map (WSM) Project
+  (e.g., <A NAME="tex2html217"
+  HREF="node30.html#reinecker03">Reinecker et&nbsp;al., 2003</A>; <A NAME="tex2html218"
+  HREF="node30.html#mueller00">M&#252;ller et&nbsp;al., 2000</A>; <A NAME="tex2html219"
+  HREF="node30.html#zoback92">Zoback, 1992</A>),
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.world-stress-map.org</TT>,</DIV>
+
+<BR>
+compiles stress measurements all
+  over the world. We supply a routine that can read the WSM's ASCII
+  format data base (<A NAME="tex2html220"
+  HREF="node30.html#mueller00">M&#252;ller et&nbsp;al., 2000</A>,<A NAME="tex2html221"
+  HREF="node30.html#muellerb97">1997a</A>).<A NAME="tex2html10"
+  HREF="footnode.html#foot214"><SUP>10</SUP></A>  It plots either only the compressive directions of the horizontal
+  stress regime (as it is commonly done), or different style vector
+  pairs on basis of the focal mechanism classification for the
+  horizontal plane projection. The different vector style plots two
+  equal length vectors (one compressional, one extensional) if the
+  focal mechanism is labeled ``strike-slip'', one compressional
+  (extensional) vector if the focal mechanism is purely compressional
+  (extensional), and it uses one half-length and one full length
+  vector for compressional or extensional mechanisms with a
+  strike-slip component in the horizontal plane.
+
+<P>
+</DD>
+<DT><STRONG>Major cities:</STRONG></DT>
+<DD>We have supplied a (rather inaccurate) data set
+  of 726 cities with their names and locations.  This data set can be
+  restricted to the major 235 cities. The corresponding data sets are
+  <TT>wcity.dat</TT> and <TT>wcity_major.dat</TT> (the latter is a subset
+  of the full data set).
+
+<P>
+</DD>
+<DT><STRONG>Custom ``xys'' files:</STRONG></DT>
+<DD>iGMT can plot two custom ASCII data files
+  specified by the user.  They have to be in a columnar ASCII format
+  (separator is a white space or tab, comment lines can be introduced
+  by a number sign, ``#''), similar to the polygon data described
+  above, and need at least longitude and latitude in every line. Size
+  values can be given optionally, hence ``xys''.  (For instance, for
+  earthquakes hypocentres you would give longitude, latitude, and
+  magnitude. The magnitude will be used to scale each symbol that is
+  plotted on your map. To change all symbol sizes in an absolute
+  sense, you can choose <TT>sizes polygon data</TT> in the <TT>Data
+    parameters</TT> menu.  When you use polygon drawing by choosing
+  ``line'' or ``close polygon'' as a symbol in <TT>Symbols polygon
+    data</TT> for your polygon file, the <TT>sizes polygon data</TT> item
+  will change the width of the line.) GMT type polygon files where
+  individual polygons are separated by an ``&gt;'' sign in a single line
+  are supported. 
+
+<P>
+You can interactively choose the column numbers (ie., use the eight
+  and ninth column instead of the first and second) which hold the x
+  and y values, if you leave the column number for size blank,
+  xy-plotting is assumed. The magnification factor is a
+  pre-multiplier for the size entry that is later modified by the
+  standard size of the symbols (see also section&nbsp;<A HREF="node12.html#datasetsmenu">6.2</A>).
+
+<P>
+</DD>
+</DL>
+
+<P>
+Technical details how these files are handled are explained later in
+the text and in the comments found in <TT>igmt_plotting.tcl</TT>. You
+might also wish to refer to the iGMT web site where you can find a
+more detailed description
+of the datasets listed above and links to the sites providing the data:
+<BR>
+<P>
+<TT>http://www.seismology.harvard.edu/<IMG
+ WIDTH="42" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sim$">becker/igmt/</TT>
+<BR>
+<P>
+In addition, this is where you can obtabin the plate velocity and
+potential field grids mentioned above.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html215"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html211"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html207"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html213"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html216"
+  HREF="node10.html">Usage of iGMT</A>
+<B> Up:</B> <A NAME="tex2html212"
+  HREF="node7.html">Datasets handled by iGMT</A>
+<B> Previous:</B> <A NAME="tex2html208"
+  HREF="node8.html">Raster data</A>
+ &nbsp <B>  <A NAME="tex2html214"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

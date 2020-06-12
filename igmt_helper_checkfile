@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# file handling script, part of the iGMT package
+# see COPYRIGHT for license and description 
+#
+# $Id: igmt_helper_checkfile,v 1.2 2001/02/09 19:09:06 becker Exp becker $
+#
+if [ $# -ne 2 ] 
+then
+    exit
+fi
+case $2 in
+    CHECK_ONLY_IF_THERE) # this option only checks if the file in 
+			 # argument one is there
+	if [ -s $1 ]
+	then
+	    echo 1
+	    exit 0
+        else 
+	    echo 0
+	    exit -1
+	fi
+	exit;;
+    *)                   # is file1 is not there, replace it with
+			 # file2
+    if [ ! -s $1 ]
+    then 
+	if [ -s $2 ]
+	then
+	    echo 1
+	    cp $2 $1
+	else
+	    echo 0
+	fi
+    fi;;
+esac
+

@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Raster data</TITLE>
+<META NAME="description" CONTENT="Raster data">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html199"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html195"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html189"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html197"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html200"
+  HREF="node9.html">Polygon data</A>
+<B> Up:</B> <A NAME="tex2html196"
+  HREF="node7.html">Datasets handled by iGMT</A>
+<B> Previous:</B> <A NAME="tex2html190"
+  HREF="node7.html">Datasets handled by iGMT</A>
+ &nbsp <B>  <A NAME="tex2html198"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00061000000000000000">
+Raster data</A>
+</H2>
+
+<P>
+Besides <TT>pscoast</TT> land and sea coverage and shorelines, 
+the following raster data files are supported:
+
+<P>
+<DL>
+<DT><STRONG>ETOPO5 topography:</STRONG></DT>
+<DD>The ETOPO5 topography/bathymetry
+<BR>  (<A
+ HREF="node30.html#etopo5">NOAA, 1988</A>, available at <TT>http://www.ngdc.noaa.gov/</TT>) is
+  supported in combination with the <TT>grdraster</TT> tool which is (as
+  <TT>psvelomeca</TT>) part of the supplementary package that is
+  available together with the GMT main distribution. The ETOPO5 data
+  set is about 19MB in i2 binary format.
+
+<P>
+</DD>
+<DT><STRONG>ETOPO2 topography:</STRONG></DT>
+<DD>The composite ETOPO2 topography/bathymetry
+dataset is desribed at <TT>http://www.ngdc.noaa.gov/mgg/fliers/01mgg04.html#GriddedF</TT>
+and supported as a GMT grd file which can be obtained from
+<BR><TT>http://dss.ucar.edu/datasets/ds759.3/data/</TT>.
+
+<P>
+</DD>
+<DT><STRONG>``GTOPO30'' topography:</STRONG></DT>
+<DD>The GTOPO30 DEM model (<A
+ HREF="node30.html#gtopo30">EDC, 1996</A>)
+  was greatly expanded by <A
+ HREF="node30.html#smith97">Smith and Sandwell (1997)</A>. It is supported in the form
+  suggested by Smith &amp; Sandwell using <TT>img2latlongrd</TT>.
+  <A NAME="tex2html8"
+  HREF="footnode.html#foot455"><SUP>8</SUP></A>  Data and other tools can be found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://topex.ucsd.edu/marine_topo/mar_topo.html</TT>.</DIV>
+
+<BR>
+The img format file is 137MB.
+
+<P>
+</DD>
+<DT><STRONG>Sea-floor age:</STRONG></DT>
+<DD>The sea-floor age data of <A
+ HREF="node30.html#mueller97">M&#252;ller et&nbsp;al. (1997b)</A> was
+  published as a GMT <TT>grdfile</TT> and is used in the form as
+  available at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://Omphacite.es.su.oz.au/StaffProfiles/dietmar/Agegrid/agegrid.html</TT>.</DIV>
+
+<BR>
+The data is about 23MB in grd format and roughly 10MB in i2 binary
+  which could be read by <TT>grdraster</TT> as ETOPO5 (to do this, change
+  the corresponding lines in <TT>igmt_plotting.tcl</TT>). By default,
+  iGMT expects the global, grid-file version (age data version 1.5).
+
+<P>
+</DD>
+<DT><STRONG>Free-air gravity:</STRONG></DT>
+<DD>Sea-floor gravity anomalies as published by
+  <A
+ HREF="node30.html#sandwell97">Sandwell and Smith (1997)</A> are used as a <TT>grdfile</TT> as found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://topex.ucsd.edu/marine_grav/mar_grav.html</TT>.</DIV>
+
+<BR>
+As GTOPO30, this file is 137MB big.
+
+<P>
+</DD>
+<DT><STRONG>Geoid:</STRONG></DT>
+<DD>iGMT supports plotting the geoid and comes with an
+  adequate colormap.  As an example, we evaluated the spherical
+  harmonic coefficients of the EGM360 model of <A NAME="tex2html201"
+  HREF="node30.html#rapp96">Rapp et&nbsp;al. (1996</A>,<A NAME="tex2html202"
+  HREF="node30.html#rapp91">1991)</A>
+  from order 2 to 360, corrected for the hydrostatic shape of the
+  Earth (<A
+ HREF="node30.html#nakiboglu82">Nakiboglu, 1982</A>), and included them in quarter arc minute
+  resolution as a GMT grd-file in our raster data set. Alternatively,
+  we also offer the OSU91A model of <A
+ HREF="node30.html#rapp91">Rapp et&nbsp;al. (1991)</A> as a ``typical''
+  geoid representation grd-file. You can download both files from our
+  web site.
+
+<P>
+</DD>
+<DT><STRONG>Global free-air gravity:</STRONG></DT>
+<DD>Derived from the EGM360 model of
+  <A NAME="tex2html203"
+  HREF="node30.html#rapp96">Rapp et&nbsp;al. (1996</A>,<A NAME="tex2html204"
+  HREF="node30.html#rapp91">1991)</A> from order 2 to 360, and included in quarter
+  arc minute resolution as a GMT grd-file in our raster data set.
+  Obtained from the file above by multiplying the spherical harmonic
+  coefficients by <IMG
+ WIDTH="114" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$g(l-1)/R$"> where <IMG
+ WIDTH="38" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$g$"> is gravitational acceleration,
+  <IMG
+ WIDTH="42" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$R$"> the radius of the Earth and <IMG
+ WIDTH="33" HEIGHT="53" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$l$"> the order of the spherical
+  harmonics.
+
+<P>
+You can download this file from our web site.
+
+<P>
+</DD>
+<DT><STRONG>Sediment thickness:</STRONG></DT>
+<DD>Sediment thickness is important for
+  seismological studies and the comparison between half-space cooling
+  model prediction and bathymetry. We have included a data handling
+  routines for the <A
+ HREF="node30.html#laske97">Laske and Masters (1997)</A> dataset. The data itself is
+  available as a <TT>grd</TT>-file on our web site.
+
+<P>
+</DD>
+<DT><STRONG>GSHAP peak ground acceleration</STRONG></DT>
+<DD>The Global Seismic Hazard
+  Assessment Program (GSHAP, <A NAME="tex2html205"
+  HREF="node30.html#giardini00">Giardini et&nbsp;al., 2000</A>,<A NAME="tex2html206"
+  HREF="node30.html#giardini99">1999</A>) has compiled a
+  world-wide 6 minute on-land dataset of estimated peak ground
+  accelerations that can be expected with a 10% probability within
+  the next 50 years (see <TT>    http://seismo.ethz.ch/gshap/global/global.html</TT>). We provide a
+  plotting facility for this type of data, the grid file can be
+  obtained from
+<BR><TT>http://seismo.ethz.ch/gshap/global/caution.html</TT>.
+
+<P>
+</DD>
+<DT><STRONG>Custom data:</STRONG></DT>
+<DD>You can choose an arbitrary GMT grd file to be
+  plotted as the base data layer and provide your own colormap, too.
+</DD>
+</DL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html199"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html195"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html189"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html197"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html200"
+  HREF="node9.html">Polygon data</A>
+<B> Up:</B> <A NAME="tex2html196"
+  HREF="node7.html">Datasets handled by iGMT</A>
+<B> Previous:</B> <A NAME="tex2html190"
+  HREF="node7.html">Datasets handled by iGMT</A>
+ &nbsp <B>  <A NAME="tex2html198"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

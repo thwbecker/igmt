@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# script to create a text file from a man page
+# part of the iGMT package, see COPYRIGHT for
+# license and description
+#
+# $Id: igmt_helper_create_man_page,v 1.2 2001/02/09 19:08:50 becker Exp becker $
+#
+
+if [ $# -eq 0 ] 
+then
+    exit
+fi
+
+if [ ! -s /tmp/igmt_mp$1.txt ]
+then 
+	( man $2  $1 | col -bx > /tmp/igmt_mp$1.txt ) 2> /dev/null 
+fi
+

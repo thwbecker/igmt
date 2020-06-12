@@ -1,0 +1,49 @@
+This is pdfTeX, Version 3.14159-14h-released-20010417 (Web2C 7.3.3.1) (format=pdflatex 2002.8.29)  3 MAR 2004 10:26
+**manual
+(/usr/share/texmf/tex/xmltex/manual.tex{/usr/share/texmf/pdftex/config/pdftex.c
+fg}
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/usr/share/texmf/tex/xmltex/xmltex.tex
+xmltex version: 2000/09/07 v1.8y (Exp)
+\XML@attribute@toks=\toks14
+\XML@ns@count=\count79
+\XML@catalogue=\toks15
+\XMLgrabtoks=\toks16
+
+Encoding = utf-8 (/usr/share/texmf/tex/xmltex/xmltex.cfg
+
+URI: 3 = http://www.w3.org/1998/Math/MathML
+
+URI: 4 = http://www.dcarlisle.demon.co.uk/sec
+
+URI: 5 = http://www.w3.org/1999/XSL/Format) 
+No File: manual.cfg
+! I can't find file `manual.xml'.
+<to be read again> 
+                   \relax 
+l.2403 ...\^^M \expandafter\XML@catcodes\XML@tempa
+                                                  
+Please type another input file name: x
+(/usr/share/texmf/tex/latex/tools/x.tex
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 %
+     %
+? x
+ 
+Here is how much of TeX's memory you used:
+ 385 strings out of 50460
+ 3768 string characters out of 688477
+ 48933 words of memory out of 1500001
+ 3463 multiletter control sequences out of 10000+25000
+ 3640 words of font info for 14 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 14i,0n,8p,164b,31s stack positions out of 3000i,500n,3000p,50000b,5000s
+No pages of output.

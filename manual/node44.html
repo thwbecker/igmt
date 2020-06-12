@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Including new data sets.</TITLE>
+<META NAME="description" CONTENT="Including new data sets.">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html674"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html670"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html666"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html672"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html675"
+  HREF="node45.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html671"
+  HREF="node42.html">Modifying iGMT</A>
+<B> Previous:</B> <A NAME="tex2html667"
+  HREF="node43.html">Using other path names</A>
+ &nbsp <B>  <A NAME="tex2html673"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION000120020000000000000">
+Including new data sets.</A>
+</H4>
+
+<P>
+You will have to do these things: (<B>to be expanded</B>)
+
+<P>
+
+<OL>
+<LI>Add the data location and its parameters to the 
+  <TT>igmt_configure.tcl</TT> file. 
+
+<P>
+This should be easier now with version 1.2 since we have replaced
+  most global variables for raster and polygon data issues with
+  arrays, such that you can simply add one more entry at the back.
+  Right now, raster data sets are reserved from 1 to 11, with the
+  limit being set to (variable: <TT>nr_of_raster_data</TT>) 20 raster
+  data sets in total. Polygon data sets are restricted to 25, and
+  right now all sets up to 20 are filled.  Read through <TT>    igmt_configure.tcl</TT> to see how the default data sets are
+  implemented here.
+
+<P>
+Parameters for raster data are: location of data file, default
+  colormap, geographical limits (East, West, South, and North
+  boundaries), integer boundaries only (on/off),  the maximum
+  resolution (in arc minutes), and resampling at other than default
+  grid spacing (on/off). For polygon data: location of data, symbol size, symbol
+  color, ...
+
+<P>
+</LI>
+<LI>Add the data selection choice to the <TT>Datasets</TT> menus. This
+  is done in <TT>igmt_menues.tcl</TT> and <TT>igmt_datasets.tcl</TT>.
+
+<P>
+</LI>
+<LI>Add the data plotting routine to <TT>igmt_plotting.tcl</TT>,
+  taking the old datasets as an example. Make use of the predefined
+  standard procedures for raster data.
+
+<P>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html674"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html670"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html666"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html672"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html675"
+  HREF="node45.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html671"
+  HREF="node42.html">Modifying iGMT</A>
+<B> Previous:</B> <A NAME="tex2html667"
+  HREF="node43.html">Using other path names</A>
+ &nbsp <B>  <A NAME="tex2html673"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

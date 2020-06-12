@@ -1,0 +1,166 @@
+\begin{thebibliography}{}
+
+\bibitem[DeMets et~al., 1990]{demets90}
+DeMets, C., Gordon, R.~G., Argus, D.~F., and Stein, S. (1990).
+\newblock Current plate motions.
+\newblock {\em Geophys. J. Int.}, 101:425--478.
+
+\bibitem[Dunbar et~al., 1997]{ngdc_sig}
+Dunbar, P.~K., Lockridge, P.~A., and Whitewide, L.~S. (1997).
+\newblock {\em Catalog of Significant Earthquakes 2150 {B.C.}--1991 {A.D.}}
+\newblock Report SE-49. National Geophysical Data Center, Boulder, Colorado.
+\newblock {\small {\tt http://www.ngdc.noaa.gov/seg/hazard/sigintro.html}}.
+
+\bibitem[Dziewo{\'{n}}ski and Woodhouse, 1983]{cmtreview}
+Dziewo{\'{n}}ski, A.~M. and Woodhouse, J.~H. (1983).
+\newblock Studies of the seismic source using normal-mode theory.
+\newblock In Kanamori, H. and Boschi, E., editors, {\em Earthquakes:
+  observation, theory, and interpretation: notes from the International School
+  of Physics ``Enrico Fermi'' (1982: Varenna, Italy)}, pages 45--137.
+  North-Holland Publ. Co., Amsterdam.
+
+\bibitem[{EDC}, 1996]{gtopo30}
+{EDC} (1996).
+\newblock {\em Global 30 Arc Second Elevation Data Set}.
+\newblock EROS Data Center, Sioux Falls, South Dakota.
+
+\bibitem[Engdahl et~al., 1998]{engdahl98}
+Engdahl, E.~R., {van der Hilst}, R.~D., and Buland, R. (1998).
+\newblock Global teleseismic earthquake relocation with improved travel times
+  and procedures for depth determination.
+\newblock {\em Bull. Seismol. Soc. Am.}, 88:722--743.
+
+\bibitem[Giardini et~al., 1999]{giardini99}
+Giardini, D., Gr{\"{u}}nthal, G., Shedlock, K., and Zhang, P. (1999).
+\newblock The {GSHAP} {G}lobal {S}eismic {H}azard {M}ap.
+\newblock {\em Annali di Geofisica}, 42:1225--1230.
+
+\bibitem[Giardini et~al., 2000]{giardini00}
+Giardini, D., Gr{\"{u}}nthal, G., Shedlock, K., and Zhang, P. (2000).
+\newblock The {GSHAP} {G}lobal {S}eismic {H}azard {M}ap.
+\newblock Technical report, ETH Z{\"{u}}rich,
+  http://seismo.ethz.ch/gshap/global/global.html.
+
+\bibitem[Gilly, 1994]{gilly94}
+Gilly, D. (1994).
+\newblock {\em UNIX in a Nutshell}.
+\newblock O'Reilly \& Associates, Inc., Cambridge.
+
+\bibitem[Gudmundsson and Sambridge, 1998]{gudmundsson98}
+Gudmundsson, O. and Sambridge, M. (1998).
+\newblock A regionalized upper mantle ({RUM}) seismic model.
+\newblock {\em J. Geophys. Res.}, 103:7121--7136.
+
+\bibitem[Laske and Masters, 1997]{laske97}
+Laske, G. and Masters, G. (1997).
+\newblock A global digital map of sediment thickness.
+\newblock {\em EOS, Trans. AGU}, 78:F483.
+
+\bibitem[M{\"{u}}ller et~al., 2000]{mueller00}
+M{\"{u}}ller, B., Reinecker, J., and Fuchs, K. (2000).
+\newblock The 2000 release of the {W}orld {S}tress {M}ap.
+\newblock Online at \url{www.world-stress-map.org}, {\em cf.}\ \cite{zoback92}.
+
+\bibitem[M{\"{u}}ller et~al., 1997a]{muellerb97}
+M{\"{u}}ller, B., Wehrle, V., and Fuchs, K. (1997a).
+\newblock The 1997 release of the {W}orld {S}tress {M}ap.
+\newblock {\em {\url
+  http://www-wsm.physik.uni-karlsruhe.de/pub/Rel97/wsm97.html}}.
+
+\bibitem[M{\"{u}}ller et~al., 1997b]{mueller97}
+M{\"{u}}ller, D., Roest, W.~R., Royer, J.-Y., Gahagan, L.~M., and Sclater,
+  J.~G. (1997b).
+\newblock Digital isochrons of the world's ocean floor.
+\newblock {\em J. Geophys. Res.}, 102:3211--3214.
+\newblock {\small {\tt
+  http://Omphacite.es.su.oz.au/StaffProfiles/dietmar/Agegrid/agegrid.html}}.
+
+\bibitem[Nakiboglu, 1982]{nakiboglu82}
+Nakiboglu, S.~M. (1982).
+\newblock Hydrostatic theory of the {E}arth and its mechanical implications.
+\newblock {\em Phys. Earth Planet. Inter.}, 28:302--311.
+
+\bibitem[{NOAA}, 1988]{etopo5}
+{NOAA} (1988).
+\newblock {\em Data Announcement {88-MGG-02}, Digital relief of the Surface of
+  the Earth}.
+\newblock National Geophysical Data Center, Boulder, Colorado.
+\newblock \url{http://www.ngdc.noaa.gov}.
+
+\bibitem[Ousterhout, 1993]{ousterhout}
+Ousterhout, J.~K. (1993).
+\newblock {\em TCL and the TK Toolkit}.
+\newblock Addison-Wesley, Reading, MA.
+
+\bibitem[Rapp et~al., 1991]{rapp91}
+Rapp, R.~H., Wang, Y.~M., and Pavlis, N. (1991).
+\newblock The {O}hio {S}tate 1991 geopotential and sea surface topography
+  harmonic coefficient models.
+\newblock Rep. 410, Dept. of Geod. Sci. and Surv., Ohio State University,
+  Columbus, Ohio.
+
+\bibitem[Rapp et~al., 1996]{rapp96}
+Rapp, R.~H., Zhang, C., and Yi, Y. (1996).
+\newblock Analysis of dynamic ocean topography using topex data and orthonormal
+  functions.
+\newblock {\em J. Geophys. Res.}, 101:22583--22598.
+
+\bibitem[Reinecker et~al., 2003]{reinecker03}
+Reinecker, J., Heidbach, O., and M{\"{u}}ller, B. (2003).
+\newblock The 2003 release of the {W}orld {S}tress {M}ap.
+\newblock (Online at \url{www.world-stress-map.org}).
+
+\bibitem[Sandwell and Smith, 1997]{sandwell97}
+Sandwell, D.~T. and Smith, W. H.~F. (1997).
+\newblock Marine gravity anomaly from {G}eosat and {ERS}-1 satellite altimetry.
+\newblock {\em J. Geophys. Res.}, 102:10039--10050.
+
+\bibitem[Simkin and Siebert, 1994]{simkin94}
+Simkin, T. and Siebert, L. (1994).
+\newblock {\em Volcanoes of the World}.
+\newblock Geoscience Press, Tucson, Arizona, 2nd edition.
+\newblock {\small {\tt http://www.volcano.si.edu/gvp/volcdata/index.htm}}.
+
+\bibitem[Smith and Sandwell, 1997]{smith97}
+Smith, W. H.~F. and Sandwell, D.~T. (1997).
+\newblock Global seafloor topography from satellite altimetry and ship depth
+  soundings.
+\newblock {\em Science}, 277:195--196.
+\newblock {\small {\tt http://topex.ucsd.edu/marine\_topo/mar\_topo.html}}.
+
+\bibitem[Steinberger, 2000]{steinberger00b}
+Steinberger, B. (2000).
+\newblock Plumes in a convecting mantle: Models and observations for individual
+  hotspots.
+\newblock {\em J. Geophys. Res.}, 105:11127--11152.
+
+\bibitem[{USGS/}{NEIC}, 1998]{usgsneic}
+{USGS/}{NEIC} (1998).
+\newblock {\em National Earthquake Information Center, World Data Center A for
+  Seismology. Global Earthquake Search}.
+\newblock United States Geological Survey, National Earthquake Information
+  Center, {\small {\tt
+  http://wwwneic.cr.usgs.gov/neis/epic/epic\_global.html}}.
+
+\bibitem[Wessel and Smith, 1991]{gmt}
+Wessel, P. and Smith, W. H.~F. (1991).
+\newblock Free software helps map and display data.
+\newblock {\em EOS Trans. AGU}, 72:445--446.
+
+\bibitem[Wessel and Smith, 1995]{wessel95}
+Wessel, P. and Smith, W. H.~F. (1995).
+\newblock New version of the {G}eneric {M}apping {T}ools released.
+\newblock {\em EOS Trans. AGU}, 76:329.
+
+\bibitem[Wessel and Smith, 1998]{wessel98}
+Wessel, P. and Smith, W. H.~F. (1998).
+\newblock New, improved version of the {G}eneric {M}apping {T}ools released.
+\newblock {\em EOS Trans. AGU}, 79:579.
+
+\bibitem[Zoback, 1992]{zoback92}
+Zoback, M.~L. (1992).
+\newblock First- and second-order patterns of stress in the lithosphere: The
+  {W}orld {S}tress {M}ap project.
+\newblock {\em J. Geophys. Res.}, 97:11703--11728.
+
+\end{thebibliography}

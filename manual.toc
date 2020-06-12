@@ -1,0 +1,44 @@
+\contentsline {section}{\numberline {1}Copyright and warranty disclaimer}{3}
+\contentsline {section}{\numberline {2}Credits and history}{4}
+\contentsline {section}{\numberline {3}Quick start and installation instructions}{5}
+\contentsline {section}{\numberline {4}Software requirements}{5}
+\contentsline {section}{\numberline {5}Installation and configuration}{7}
+\contentsline {subsection}{\numberline {5.1}Examples of modifying default variables}{8}
+\contentsline {section}{\numberline {6}Datasets handled by iGMT}{8}
+\contentsline {subsection}{\numberline {6.1}Raster data}{8}
+\contentsline {subsection}{\numberline {6.2}Polygon data}{10}
+\contentsline {section}{\numberline {7}Usage of iGMT}{12}
+\contentsline {subsection}{\numberline {7.1}Menu {\tt File}}{12}
+\contentsline {subsection}{\numberline {7.2}Menu {\tt Datasets}}{13}
+\contentsline {subsection}{\numberline {7.3}Menu {\tt Data parameters}}{13}
+\contentsline {paragraph}{Menu items for {\tt pscoast}}{13}
+\contentsline {paragraph}{Raster data set items}{13}
+\contentsline {paragraph}{Polygon data set items}{14}
+\contentsline {subsection}{\numberline {7.4}Menu {\tt Map parameters}}{14}
+\contentsline {paragraph}{Item {\tt Region}}{14}
+\contentsline {paragraph}{Item {\tt Projection}}{14}
+\contentsline {paragraph}{Items for map grid line and frames}{14}
+\contentsline {paragraph}{Miscellaneous plotting items}{14}
+\contentsline {subsection}{\numberline {7.5}Menu {\tt Script}}{14}
+\contentsline {subsection}{\numberline {7.6}Menu {\tt GMT help}}{15}
+\contentsline {section}{\numberline {8}Examples}{15}
+\contentsline {paragraph}{Hypocentres from the NEIC dataset}{15}
+\contentsline {paragraph}{Smith \& Sandwell/GTOPO30 topography}{16}
+\contentsline {paragraph}{Sea-floor age of M{\"{u}}ller et al.}{16}
+\contentsline {paragraph}{Gravity anomalies from \cite {sandwell97}}{16}
+\contentsline {section}{\numberline {9}Conclusion}{18}
+\contentsline {section}{References}{18}
+\contentsline {section}{\numberline {A}Technical details}{20}
+\contentsline {subsection}{\numberline {A.1}Organization of the iGMT software}{20}
+\contentsline {paragraph}{Copyright:}{20}
+\contentsline {paragraph}{configure\_script:}{20}
+\contentsline {paragraph}{img2grd:}{20}
+\contentsline {paragraph}{The {\tt igmt} file:}{20}
+\contentsline {paragraph}{Tcl files:}{21}
+\contentsline {paragraph}{{\tt igmt\_helper\_} files}{21}
+\contentsline {paragraph}{{\tt example.dat} and {\tt .ps}:}{21}
+\contentsline {paragraph}{Documentation and data}{21}
+\contentsline {paragraph}{Colormaps:}{21}
+\contentsline {section}{\numberline {B}Modifying iGMT}{22}
+\contentsline {paragraph}{Using other path names for the data sets.}{22}
+\contentsline {paragraph}{Including new data sets.}{22}

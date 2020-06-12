@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Raster data set items</TITLE>
+<META NAME="description" CONTENT="Raster data set items">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html308"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html304"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html298"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html306"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html309"
+  HREF="node16.html">Polygon data set items</A>
+<B> Up:</B> <A NAME="tex2html305"
+  HREF="node13.html">Menu Data parameters</A>
+<B> Previous:</B> <A NAME="tex2html299"
+  HREF="node14.html">Menu items for pscoast</A>
+ &nbsp <B>  <A NAME="tex2html307"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00073020000000000000">
+Raster data set items</A>
+</H4>
+Toggle the automatically provided legends/colorbars for the gravity,
+age, geoid and topography data sets on and off and select the grid
+resolution. If the value you choose (in arc minutes) is smaller than
+the minimum value supported by the specific data set, iGMT increases
+the value automatically. There will be a warning when a large number
+of data points are about to be processed. Keep in mind that small
+machines might have a hard time if the resolution is too high and/or
+the map size is too big.
+
+<P>
+``Change colormap'' lets the user choose a colormap other than the
+ones used automatically when a predefined raster data file is
+selected. If you change the raster data set to one of the predefined
+ones after choosing your own colormap, you have to reenter the
+selection.
+
+<P>
+``Create colormap'' uses the GMT tool <TT>grd2cpt</TT> to automatically
+create a colormap for the default grd-file that is set.  For GMT
+versions higher than 3.2, the user can select from different colormap
+schemes (see the man page for <TT>grd2cpt</TT>), otherwise it's
+``rainbow''. Since the colormap is based on a histogram of the
+grd-file, colormap creation might take a while with slow machines
+and/or large datasets.
+
+<P>
+Use ``Shade raster data'' to toggle the shading that is done for
+topographic and gravity datasets using <TT>grdgradient</TT>.
+
+<P>
+Following is the ``Contour lines'' item which you can use to switch
+the plotting of contour lines of the grdfile values to overlay (on top
+of grdimage produced plot), only contourlines (``solely''), or off.
+In addition, you can select the color of contour lines, set the width
+of contour lines, the contour line density, and the annotation text
+size. By default, iGMT will use black for the color, contour line
+density of unity (which corresponds to on the order of ten contour
+lines), linewidth 2 for normal lines. Every second contour line is
+annotated and has double width. Also, annotations will be 14pt size,
+set them to ``-'' if no annotation is wanted.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html308"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html304"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html298"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html306"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html309"
+  HREF="node16.html">Polygon data set items</A>
+<B> Up:</B> <A NAME="tex2html305"
+  HREF="node13.html">Menu Data parameters</A>
+<B> Previous:</B> <A NAME="tex2html299"
+  HREF="node14.html">Menu items for pscoast</A>
+ &nbsp <B>  <A NAME="tex2html307"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

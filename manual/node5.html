@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Installation and configuration</TITLE>
+<META NAME="description" CONTENT="Installation and configuration">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="manual.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html162"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html158"
+  HREF="manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html152"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html160"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html163"
+  HREF="node6.html">Examples of modifying default</A>
+<B> Up:</B> <A NAME="tex2html159"
+  HREF="manual.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html153"
+  HREF="node4.html">Software requirements</A>
+ &nbsp <B>  <A NAME="tex2html161"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00050000000000000000"></A><A NAME="install"></A>
+<BR>
+Installation and configuration
+</H1>
+
+<P>
+To get iGMT running, extract the distribution <TT>igmt_v1.2.tar.gz</TT>
+(or, alternatively, its slim version <TT>igmt_v1.2_wo.tar.gz</TT>) -if
+you have not already done so- in a directory where you typically
+store Tcl/Tk scripts. This could well be at the single user level on
+multi-user systems (non-root priveliges installation) since the
+package itself is relatively small. Installing multiple copies would
+allow every user to modify the iGMT code themselves.
+
+<P>
+From here, you can either choose to use the script <TT>  configure_script</TT> which we provide or proceed to do a few changes
+manually. If you choose the ``automatic'' way, you will have to enter
+the iGMT directory that you just created by expanding the tar-file and
+type <TT>./configure_script</TT>. After answering a couple of questions,
+you should be all set.
+
+<P>
+If, on the other hand, you would like to stay in control, simply check
+the following steps:
+
+<OL>
+<LI>The ksh shell location. If Korn shell is not in its default
+  place (<TT>/bin/ksh</TT>) (such as on LINUX systems which simply don't
+  have ksh at all but bash), you will have to change all references to
+  it in the iGMT sources. This is simplest done (if you have <TT>    perl</TT> installed) by entering the iGMT
+  root directory and typing, for example,
+<BR>
+<P>
+<TT>perl -i -p -e s'+/bin/ksh+/bin/bash+g' *</TT>
+<BR>
+<P>
+when you would like to use <TT>bash</TT> in <TT>/bin/bash</TT> (E. W. Lisse). (Also see
+  our web page,
+<BR>
+<P>
+<TT>http://op.gfz-potsdam.de/igmt/compatibility.html</TT>.
+<BR>
+<P>
+However, since ksh has recently become open source, we encourage you
+  to install ksh in <TT>/bin/ksh</TT> if it's not on your system already.
+
+<P>
+</LI>
+<LI>Next, an environment variable <TT>$igmt_root</TT> can be set to
+  point to the directory where iGMT resides. With <TT>csh</TT> this would
+  be done by adding a line like
+<BR>  <DIV ALIGN="CENTER">
+<TT>setenv igmt_root $HOME/tcltk/igmt_dir/</TT></DIV>
+
+<BR>
+to the <TT>$HOME/.login</TT> file. For <TT>ksh</TT> you would add
+<BR>  <DIV ALIGN="CENTER">
+<TT>export igmt_root=$HOME/tcltk/igmt_dir/</TT></DIV>
+
+<BR>
+to the <TT>.profile</TT> file. Alternatively, you will have to modify
+  the main iGMT script (startup script file) <TT>igmt</TT> and change
+  line 39 to point to the root directory.
+
+<P>
+</LI>
+<LI>The <TT>igmt</TT> script calls the Tcl/Tk shell <TT>wish</TT> using
+  the explicit call to <TT>/usr/bin/wish</TT> in line 75. If <TT>wish</TT>
+  is somewhere else on your system (try typing <TT>which wish</TT> or
+  <TT>type which</TT>), either change the corresponding line in <TT>    igmt</TT> or set the another environment variable <TT>$wish_cmd</TT>.
+  After verifying the settings, <TT>igmt</TT> should be executable and
+  iGMT can be started by typing <TT>$igmt_root/igmt</TT> at the command
+  line. (Of course this can be facilitated by adding an alias or
+  linking <TT>$igmt_root/igmt</TT> to some place where your shell looks
+  for executables.)
+
+<P>
+</LI>
+<LI><B>NEW:</B> iGMT needs to know where the GMT binaries (old and
+  new) are located. In a similar fashion as above for <TT>wish</TT>, find
+  out where that is (say, in <TT>/usr/local/bin</TT>)
+  and add two lines like
+<BR>  <TT>set higher_version_gmtbins /usr/local/bin/</TT>
+<BR>  <TT>set lower_version_gmtbins /usr/local/oldgmt/bin/</TT>
+<BR>
+to your <TT>igmt_siteconfig.tcl</TT> file that holds all the necessary
+  modifications to get iGMT running in your environment.
+
+<P>
+</LI>
+</OL>
+
+<P>
+As mentioned above, you can change many of the other default settings
+of iGMT such as the helping applications and the pathnames of dataset
+locations by modifying the corresponding iGMT variables. Most of these
+variables are set in the Tcl program file <TT>igmt_configure.tcl</TT>.
+You can modify settings by searching for the variable or topic in
+question and replacing the iGMT variable value directly in the <TT>  igmt_configure.tcl</TT> file.  The preferred way, however, is to create
+a <TT>igmt_siteconfig.tcl</TT> file and insert the corresponding line
+there. This file is read by iGMT after the initialization of the
+variables (by means of <TT>igmt_config.tcl</TT>) so that all settings
+will be overwritten by the users preferences. By doing things this
+way, it will be easier to install future versions of iGMT since all
+local modifications, such as different data locations, don't have to
+be changed again.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html164"
+  HREF="node6.html">Examples of modifying default variables</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html162"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html158"
+  HREF="manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html152"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html160"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html163"
+  HREF="node6.html">Examples of modifying default</A>
+<B> Up:</B> <A NAME="tex2html159"
+  HREF="manual.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html153"
+  HREF="node4.html">Software requirements</A>
+ &nbsp <B>  <A NAME="tex2html161"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

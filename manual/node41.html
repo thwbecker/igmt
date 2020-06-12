@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Colormaps:</TITLE>
+<META NAME="description" CONTENT="Colormaps:">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node40.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node42.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html638"
+  HREF="node42.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html634"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html630"
+  HREF="node40.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html636"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html639"
+  HREF="node42.html">Modifying iGMT</A>
+<B> Up:</B> <A NAME="tex2html635"
+  HREF="node32.html">Organization of the iGMT</A>
+<B> Previous:</B> <A NAME="tex2html631"
+  HREF="node40.html">Documentation and data</A>
+ &nbsp <B>  <A NAME="tex2html637"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION000111090000000000000">
+Colormaps:</A>
+</H4> The <TT>colormaps</TT> directory contains the colormaps that are
+used by iGMT to map the default datasets. <TT>col.00.cpt</TT> through
+<TT>col.35.cpt</TT> are generic colormaps which span the data range from
+<IMG
+ WIDTH="89" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$-1\ldots1$">. If you want to convert these colormaps to suit your data,
+use an awk script like <TT>colminmax.awk</TT> which comes with the iGMT
+distribution.  <PRE>
+# script to convert the data range of colorscale files for GMT
+# by rescaling
+BEGIN{
+  if(min==0)min=-1.;
+  if(max==0)max=1.;
+  mean=(max+min)/2.;
+  range=(max-min)/2.;
+  printevery=50;
+}
+{
+  if(NR&lt;256){
+    if(printevery - NR &gt; 0)
+      print($1*range+mean,$2,$3,$4,$5*range+mean,$6,$7,$8,$9);
+    else {
+      print($1*range+mean,$2,$3,$4,$5*range+mean,$6,$7,$8,$9,"L");
+      printevery=NR+printevery;
+    }
+  }
+  else
+    print($0);
+
+}
+</PRE>If your data sets contains values between <IMG
+ WIDTH="52" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$-2$"> and 3, say, and you would like to use the
+rainbow colored colorscale <TT>col.13.cpt</TT>, use
+<BR> <DIV ALIGN="CENTER">
+<TT>awk -f $igmt_root/colminmax.awk min=-2 max=3 ...
+<BR>$igmt_root/colormaps/col.13.cpt &gt; new_colormap.cpt</TT>. 
+<BR>
+</DIV>
+Here, ``...'' means that the above should be in one line.
+
+<P>
+Also, you might want to use the <TT>grd2cpt</TT> function of GMT that
+can be accessed over <TT>create colormap</TT> menu item.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>

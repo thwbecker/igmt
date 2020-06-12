@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: manual.aux
+The style file: apalike.bst
+Database file #1: erdbeben.bib
+Warning--empty journal in mueller00
+You've used 28 entries,
+            1935 wiz_defined-function locations,
+            660 strings with 8119 characters,
+and the built_in function-call counts, 10582 in all, are:
+= -- 1054
+> -- 404
+< -- 19
++ -- 147
+- -- 130
+* -- 862
+:= -- 1883
+add.period$ -- 91
+call.type$ -- 28
+change.case$ -- 199
+chr.to.int$ -- 27
+cite$ -- 29
+duplicate$ -- 391
+empty$ -- 741
+format.name$ -- 176
+if$ -- 2046
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 148
+num.names$ -- 86
+pop$ -- 159
+preamble$ -- 1
+purify$ -- 204
+quote$ -- 0
+skip$ -- 293
+stack$ -- 0
+substring$ -- 775
+swap$ -- 32
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 154
+warning$ -- 1
+while$ -- 87
+width$ -- 0
+write$ -- 379
+(There was 1 warning)

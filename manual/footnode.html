@@ -1,0 +1,552 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Footnotes</TITLE>
+<META NAME="description" CONTENT="Footnotes">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="manual.html">
+</HEAD>
+
+<BODY >
+
+<DL>
+<DT><A NAME="foot7">... Becker</A><A
+ HREF="manual.html#tex2html1"><SUP>1</SUP></A></DT>
+<DD>
+        Cecil H. and Ida M. Green Institute of Geophysics and Planetary Physics,
+        Scripps Institution of Oceanography,      University of California, San Diego,
+        La Jolla, CA,    USA.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot8">... Braun</A><A
+ HREF="manual.html#tex2html2"><SUP>2</SUP></A></DT>
+<DD>Byrd Polar Research Center, Ohio State
+  University, Columbus, OH, USA
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot24">...
+yet</A><A
+ HREF="node3.html#tex2html3"><SUP>3</SUP></A></DT>
+<DD>All that's missing is basically some geographical sorting
+  which could be implemented using GMT functions as well.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot447">...
+systems</A><A
+ HREF="node4.html#tex2html4"><SUP>4</SUP></A></DT>
+<DD> It will be assumed that the user has some
+familiarity with the UNIX operating system and basics will not be
+explained here (for UNIX and shell scripting reference see,
+e.g., <A
+ HREF="node30.html#gilly94">Gilly, 1994</A>). Also ask your favorite system administrator if
+things sound Greek to you.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot31">... programs.</A><A
+ HREF="node4.html#tex2html5"><SUP>5</SUP></A></DT>
+<DD>We have heard of successful
+installations on the following operating systems: MacOS X (10.x),
+SunOS 5.6, Solaris 2.5.1-2.6, HP-UX10.01, DEC OSF, IBM AIX 4.1.x,
+4.2.1, IRIX 4.0.5, 6.2-6.5 and LINUX (SuSE 5.1, 5.2, Redhat 4.2, 5.2,
+6.0, 7.1 Debian). An implementation on PalmPilot is in the works.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot449">... different.</A><A
+ HREF="node4.html#tex2html6"><SUP>6</SUP></A></DT>
+<DD> At the moment, <EM>standard</EM> Tcl photo image displaying works only with <TT>GIF</TT>
+    and <TT>ppm</TT> images.  Since <TT>ppm</TT>s are usually much bigger
+    than <TT>GIF</TT> images, we chose <TT>GIF</TT> to be the standard.  If
+    you choose ppm (not interfering with possible copyright issues),
+    and continue to use <TT>convert</TT>, just change the name of the
+    converted file for <TT>convert</TT> in <TT>igmt_siteconfig.tcl</TT> to
+    have a <TT>ppm</TT> suffix. For ghostscript, you need to change the
+    command line used for the conversion operating system call (see
+    the comments in the <TT>igmt_configure.tcl</TT> file).
+
+<P>
+User E. Suarez has implemented another graphic format which is
+    smaller (png) but for this to work, a non-standard extension of
+    Tcl/Tk is needed. This is why we still stick to GIF and will
+    probably change the graphic format only in the next version.
+
+<P>
+From now on, we use the acronym ``GIF'' to refer to whatever
+    graphic format you chose.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot454">... etc.</A><A
+ HREF="node7.html#tex2html7"><SUP>7</SUP></A></DT>
+<DD>Man pages and other documentation are
+  available for the GMT commands. Therefore, the explicit usage will
+  not be explained in this manual. Refer, e.g., to the man page
+  function provided by iGMT or to <TT>http://www.soest.hawaii.edu/wessel/gmt/gmt_doc.html</TT>.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot455">...<TT>img2latlongrd</TT>.
+  </A><A
+ HREF="node8.html#tex2html8"><SUP>8</SUP></A></DT>
+<DD>If your distribution of GMT does not have <TT>img2latlongrd</TT> anymore, use the <TT>img2grd</TT> that comes with
+    GMT starting from 3.3.6 as an alternative (included in the iGMT
+    package). To do this, set the <TT>use_img2latlon_batch</TT>
+    variable to unity in your <TT>site_config.tcl</TT> file (see
+    sec.&nbsp;<A HREF="node5.html#install">4</A>).  
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot210">...<TT>grdvector</TT>.</A><A
+ HREF="node9.html#tex2html9"><SUP>9</SUP></A></DT>
+<DD>An example for such datafiles
+    would be the expansions of plate velocity Euler poles you can find
+    at our website.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot214">...muellerb97,mueller00.</A><A
+ HREF="node9.html#tex2html10"><SUP>10</SUP></A></DT>
+<DD>Our script
+    can read the 1997, 2000, and 2003 formats of the WSM data format (they
+    are different as to the addition of the ``ISO'' field in 2000).
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot234">...<TT>Quit</TT>.</A><A
+ HREF="node10.html#tex2html11"><SUP>11</SUP></A></DT>
+<DD>For ease of use, these menus
+  can be detached under Tcl/Tk by choosing the dashed line on top of
+  each list and moving them to the work space.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot469">... do.</A><A
+ HREF="node16.html#tex2html12"><SUP>12</SUP></A></DT>
+<DD>Some symbols disregard the <TT>-G</TT> option (e.g. crosses) so that they will appear in boring
+  black whatever you do with the color sliders. You will have to fix
+  this by replacing the <TT>-GRRR/GGG/BBB</TT> option with <TT>-Wsize/RRR/GGG/BBB</TT> in the final script.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+<DT><A NAME="foot474">... frame.</A><A
+ HREF="node20.html#tex2html13"><SUP>13</SUP></A></DT>
+<DD>Change
+  this in <TT>igmt_plotting.tcl</TT>, if you like.
+
+<PRE>.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+</PRE>
+</DD>
+</DL>
+</BODY>
+</HTML>

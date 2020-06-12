@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# script to create a contour interval file from a grd file for grdcontour
+#
+# part of the iGMT package, see COPYRIGHT for description
+# and license
+# 
+# $Id: igmt_helper_create_ci_file,v 1.6 2001/08/08 15:43:11 becker Exp becker $
+#
+if [ $# -lt 1 ];then
+    echo $0: usage:
+    echo 
+    echo `basename $0` file.grd [density] [gmtbinary_directory] [our_awk] [adens]
+    echo 
+    exit
+fi
+# input grid file
+grdf=$1
+if [ ! -s $grdf ];then
+    echo `basename $0`: can not find grd file $grdf
+    exit
+fi
+# contour density
+density=${2-1.0}
+# gmt binary directory as arg 3?
+if [ $# -gt 2 ];then gi=$3/grdinfo;else gi=grdinfo;fi
+# select correct awk as arg 4
+if [ $# -gt 3 ];then our_awk=$4;else our_awk=gawk;fi
+if [[ $our_awk != nawk  &&  $our_awk != gawk ]];then
+	echo `basename $0`: Creating contour intervals requires gawk or nawk, 
+	echo `basename $0`: change your igmt_configure.tcl/igmt_siteconfig.tcl!
+	exit
+fi
+# annotation density as five
+adens=${5-2}
+
+min=`$gi -C $grdf | $our_awk '{print($6)}'`
+max=`$gi -C $grdf | $our_awk '{print($7)}'`
+
+
+echo $min $max $density $adens | \
+    $our_awk '{min=$1;max=$2;if(min > max){\
+    tmp=min;min=max;max=tmp;}\
+    dens=($3!=0)?$3:1e-10;\
+    if($4<0)ae=-1;else ae=(dens>=2)?$4*2:$4;\
+    range=max-min;if(range==0.0){dx=1.0;}else{dx=10**(int(log(range)/log(10)-0.5));}\
+    i=0;dx/=dens;\
+    for(x=dx*int(min/dx);x<=max;x+=dx){print(x,(ae<0)?"C":((i%ae==0)?"A":"C"));i++;}}'
+

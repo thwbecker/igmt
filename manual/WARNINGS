@@ -1,0 +1,11 @@
+No implementation found for style `url'
+No implementation found for style `pslatex'
+No implementation found for style `caption'
+
+manual.tex is newer than manual.aux: Please rerun latex.
+
+manual.tex is newer than manual.bbl: Please rerun latex and bibtex.
+
+\bibitem label format not supported, using \bibcite information!
+
+? brace missing for \url

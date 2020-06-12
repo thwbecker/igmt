@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Using other path names for the data sets.</TITLE>
+<META NAME="description" CONTENT="Using other path names for the data sets.">
+<META NAME="keywords" CONTENT="manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual.css">
+
+<LINK REL="next" HREF="node44.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node42.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html664"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html660"
+  HREF="node42.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html654"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html662"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html665"
+  HREF="node44.html">Including new data sets.</A>
+<B> Up:</B> <A NAME="tex2html661"
+  HREF="node42.html">Modifying iGMT</A>
+<B> Previous:</B> <A NAME="tex2html655"
+  HREF="node42.html">Modifying iGMT</A>
+ &nbsp <B>  <A NAME="tex2html663"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION000120010000000000000">
+Using other path names for the data sets.</A>
+</H4> 
+
+<P>
+All pathnames to data locations are assigned in <TT>igmt_configure.tcl</TT>. 
+All raster data sets have two variables assigned to them: <TT>  raster_data(i)</TT> and <TT>raster_colormap(i)</TT>, they refer to the
+location of the raster data set number <TT>i</TT> and the location of the 
+default colormap, respectively. Simply add a line like
+<TT>set raster_data(3) "/home/user/gtopo30/topo_6.2.img"</TT>
+to your <TT>igmt_siteconfig.tcl</TT> file, if your GTOPO30 dataset
+(number 3 internally) is in <TT>/home/user/gtopo30/</TT>. The equivalent
+variables for polygon data are called <TT>poly_data(i)</TT>, and it is
+simplest to search for the appropriated variable names in <TT>  igmt_configure.tcl</TT>. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+Thorsten Becker
+2004-03-04
+</ADDRESS>
+</BODY>
+</HTML>
