@@ -1,0 +1,145 @@
+#!/bin/csh
+################################################################################
+#
+# configuration script to be run first time around
+# part of the iGMT package, see COPYRIGHT for license and description
+#
+# if the script fails, follow the instruction in manual.ps
+#
+# $Id: configure_script,v 1.2 2005/12/11 07:37:08 becker Exp becker $
+#
+#
+################################################################################
+set version = 1.2
+echo "############################################################"
+echo "iGMT version $version configuration script running"
+echo 
+echo "If this script fails, please follow the steps as described in the manual"
+echo 
+echo 
+echo
+
+# check for the iGMT root directory
+echo
+echo main iGMT path setting in igmt.tcl file
+echo
+if ($?igmt_root) then
+	echo iGMT root directory is set by environment variable \"\$igmt_root\" to $igmt_root
+	if ( $igmt_root != `pwd` ) then
+	    echo WARNING:
+	    echo This appears to be different from our working directory \(`pwd`\),
+	    echo which is also quite likely the iGMT root directory.
+	    echo You will probably have to change the variable setting in your 
+	    echo \".login\" or \".profile\" files. 
+        endif
+	set idir = $igmt_root
+else
+	echo iGMT root directory is not set by environment variable \"\$igmt_root\"
+	echo Will attempt to hardwire the directory and write to \"igmt\"
+	set idir = `pwd`
+	set idirsed = `echo $idir | gawk '{gsub("/","\\/");print($0);}'`
+	echo -n "Is our working directory (the iGMT root directory) $idir? (y/n) [y]: "
+	set answer = $<
+	if ($answer == "n" || $answer == "N") then
+		echo -n "What is the iGMT root directory then?: "
+		set idir = $<
+	endif
+	set string = s/\$HOME\\/progs\\/src\\/igmt_1.2/$idirsed/g
+	echo $string
+	cp -f igmt igmt.original
+	sed $string igmt > tmp.$$; mv -f tmp.$$ igmt; chmod a+x igmt
+	echo Changed reference to iGMT root directory in \"igmt\" to $idir
+	echo Old state of igmt saved in igmt.old
+endif
+
+echo
+
+# check for the location of the wish binary
+echo
+echo wish binary location
+echo
+echo Checking for the Tcl/Tk shell \"wish\" \(make sure it\'s the right version!\)
+if ($?wish_cmd) then
+	echo The Tcl/Tk wish command is set by environment variable \"\$wish_cmd\" to $wish_cmd
+	if ( $wish_cmd != `which wish` ) then
+	    echo WARNING:
+	    echo This is different from the likely lcoation of \"wish\", `which wish`.
+	    echo You might have to change the variable setting, most likely in your 
+	    echo \".login\" or \".profile\" file.
+	    echo You can determine if \"wish\" is in your path and where it is located by
+	    echo typing \"which wish\" for csh or \"type wish\" for ksh.
+	endif
+else
+	echo Tcl/Tk wish command is not set by environment variable \"\$wish_cmd\"
+	echo Will attempt to hardwire this binary and write to \"igmt\"
+	set wbin = `which wish`
+	echo -n "Is the wish binary located in $wbin? (y/n) [y]: "
+	set answer = $<
+	if ($answer == "n" || $answer == "N") then
+		echo -n "What is the right wish binary then?: "
+		set wbin = $<
+	endif
+	perl -i -p -e s"+/usr/local/bin/wish+$wbin+g" igmt
+	echo Changed reference to wish command in \"igmt\" to $wbin
+endif
+
+
+# check for the location of the GMT binaries
+echo
+echo gmt binary location
+echo
+set gmtbins = `which gmtdefaults | gawk '{p=substr($1,1,length($1)-11);if(length(p)<2)print("/usr/local/src/GMTdev/GMT4.0/bin/");else print(p);}'`
+echo $gmtbins
+echo "Are the GMT binaries located in $gmtbins? (y/n) [y]:"
+set answer = $<
+if ($answer == "n" || $answer == "N") then
+    echo -n "What is the right path to the binaries, then (include the last \"/\")?: "
+    set gmtbins= $<
+endif
+
+echo using $gmtbins as the GMT binary directory
+echo adding a line to your igmt_siteconfig.tcl file
+echo set higher_version_gmtbins $gmtbins >> $idir/igmt_siteconfig.tcl
+echo set lower_version_gmtbins $gmtbins >> $idir/igmt_siteconfig.tcl
+echo
+
+echo Make sure that every user has \$GMTHOME defined, presumably to something like
+echo `echo $gmtbins | gawk '{print(substr($1,1,length($1)-4))}'`
+echo 
+
+echo
+echo
+echo Setting the path to raster data. 
+echo
+echo You can do this manually by reading igmt_configure.tcl and then resetting filenames
+echo in igmt_siteconfig.tcl. However, it is useful to set one main directory, under which 
+echo data is stored. This is what we are looking for here. If you downloaded the data
+echo from our web site, this is the place to put it.
+echo 
+echo
+set datadir=/wrk/data
+echo "Are the raster data file located in subdirectories of $datadir? (y/n) [y]:"
+set answer = $<
+if ($answer == "n" || $answer == "N") then
+    echo -n "What is the right path to the data subdirectories, then (include the last \"/\")?: "
+    set datadir= $<
+endif
+echo
+echo Adding one line with the main directory for raster data to your igmt_siteconfig.tcl file
+echo set rasterpath  $datadir >> $idir/igmt_siteconfig.tcl
+echo
+
+echo
+echo Script done, iGMT should start up when you type $idir/igmt.
+echo You might want to alias $idir/igmt to something shorter.
+echo
+echo Should you experience any difficulties, reexpand the tar-file and
+echo apply changes by hand as explained on the iGMT web page and in the
+echo manual. Further changes to the iGMT default settings such as path
+echo names to data files should be done by resetting variables from 
+echo \"igmt_configure.tcl\" in a file \"igmt_siteconfig.tcl\" \(to be created\).
+echo "############################################################"
+
+
+
+
