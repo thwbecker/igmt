@@ -17,13 +17,12 @@ description of the software usage in the "manual.ps" file that should
 have come with the distribution ("Display manual") or refer to the
 iGMT web site
 
-		   geodynamics.usc.edu/~becker/igmt
+		   http://www-udc.ig.utexas.edu/external/becker/igmt/
 				   
 Main authors:
 	
 			  Thorsten W. Becker 
-		  University of Southern California
-			    Los Angeles CA
+			       UT Austin
 
 				 and
 
