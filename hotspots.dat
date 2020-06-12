@@ -1,0 +1,60 @@
+# hotspot list from:
+# @Article{steinberger00b,
+#  author = 	 {Steinberger, B.},
+#  title = 	 {Plumes in a convecting mantle: Models and observations for individual
+#    hotspots},
+#  journal = 	 JGR,
+#  year = 	 2000,
+#  volume =	 105,
+#  pages =	 {11127--11152}
+# }
+#
+# with updates from Steinberger & Arntretter (G-Cubed, 2006)
+#
+#
+# name			age   B	   lat    lon
+# 
+               Louisville 120 3.0 -51.0 -138.0
+                Kerguelen 117 0.9 -49.0   69.0
+            Marion_Island 195 --- -46.9   37.8
+                  Tristan 125 1.0 -38.0  -11.0
+           Easter_Islands  68 2.1 -27.1 -109.3
+                  Reunion  67 1.4 -21.2   55.7
+                St_Helena 100 0.4 -18.0  -10.0
+         Tahiti_(Mehetia)   5 4.5 -17.9 -148.1
+                    Samoa  14 1.6 -15.0 -168.0
+         Hawaii_(Kilauea) 100 8.3  19.4 -155.3
+              New_England 120 0.4  29.0  -32.0
+                  Iceland  60 1.2  65.0  -19.0  
+  Balleny_(Buckle_Island)  36 --- -66.8  163.3
+                   Meteor 120 0.5 -52.0    1.0
+                 Tasmanid  50 0.9 -39.0  156.0
+           East_Australia  50 0.9 -38.0  143.0
+           Juan_Fernandez  30 1.7 -34.0  -82.0
+                Lord_Howe  50 0.9 -33.0  159.0
+                     Vema  40 0.4 -33.0    4.0
+         Macdonald_(Smt.) 120 3.6 -29.0 -140.2
+                San_Felix  30 1.9 -26.0  -80.0
+                 Pitcairn   8 2.5 -25.0 -129.0
+    Trindade_(Martin_Vas) 120 0.7 -20.5  -28.8
+       Comores_(Karthala)  63 --- -11.8   43.3
+                Marquesas   9 3.9 -11.0 -138.0
+                 Fernando  70 0.7  -4.0  -32.0
+      Galapagos_(Fern.I.)  85 1.4  -0.4  -91.5
+           Cameroon_(Mt.)  31 ---   4.2    9.2
+                 Caroline  80 1.6   5.0  164.0
+              East_Africa  40 1.1   6.0   34.0
+                   Darfur 140 0.4  13.0   24.0
+               Cape_Verde  20 1.1  15.0  -24.0
+           Socorro_Island  25 0.5  18.7 -111.0
+                  Tibesti  80 0.3  21.0   17.0
+                   Hoggar  20 0.6  23.0    6.0
+                Guadelupe  25 0.3  27.0 -113.0
+                   Canary  65 1.0  28.0  -18.0
+                    Raton  20 ---  37.0 -104.0
+            Azores_(Pico) 100 1.2  38.5  -28.4
+              Yellowstone  15 1.5  44.6 -110.5
+        Cobb_(Axial_Smt.)  43 0.3  46.0 -130.0
+                    Eifel  40 ---  50.0    7.0
+                    Bowie  28 0.6  53.0 -135.0
+   Jan_Mayen_(Beerenberg) 210 0.6  71.1   -8.2
