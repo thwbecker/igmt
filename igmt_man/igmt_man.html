@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>iGMT: Interactive Mapping of Geoscientific Datasets.
+User manual for version 1.2</TITLE>
+<META NAME="description" CONTENT="iGMT: Interactive Mapping of Geoscientific Datasets.
+User manual for version 1.2">
+<META NAME="keywords" CONTENT="igmt_man">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="igmt_man.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY LANG="EN" BACKGROUND="bgr2.gif">
+
+<A NAME="tex2html17"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up_g.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev_g.gif"> 
+<A NAME="tex2html15"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html18"
+  HREF="node1.html">Contents</A>
+<BR> <P>
+
+<!--End of Navigation Panel-->
+<H1 ALIGN="CENTER">iGMT: Interactive Mapping of Geoscientific Datasets.
+<BR>
+User manual for version 1.2</H1>
+<P ALIGN="CENTER"><STRONG>Thorsten W. Becker<A NAME="tex2html1"
+  HREF="footnode.html#foot4"><SUP>1</SUP></A>  - 
+  Alexander Braun<A NAME="tex2html2"
+  HREF="footnode.html#foot5"><SUP>2</SUP></A></STRONG></P>
+
+<H3>Abstract:</H3>
+<DIV>
+
+<P>
+iGMT is a Tcl/Tk package for interactive mapping of geoscientific datasets,
+built around the generic mapping tools (GMT). Our software is intended
+to assist in the creation of GMT scripts and has built-in data
+processing  capabilities for raster data sets
+such as topography, sea-floor age, free air-gravity, the geoid, and
+various polygon data files such as earthquake hypocentre lists or hot-spot locations. 
+
+<P>
+iGMT is used world-wide at more than 100 institutions for everyday
+map-making and teaching GMT. Our program should run on any UNIX-type
+computer since it is entirely based on open-source software.  iGMT
+itself is distributed under the GNU public license but has to be used
+in accordance with the Student Pugwash pledge.
+
+<P>
+This manual briefly describes how iGMT is used and explains some
+technical details that may be helpful if the user wishes to extent or
+modify iGMT. 
+
+<P>
+</DIV>
+<P>
+
+<BR> <HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html19"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html20"
+  HREF="node2.html">Copyright and warranty disclaimer</A>
+<LI><A NAME="tex2html21"
+  HREF="node3.html">Credits and history</A>
+<LI><A NAME="tex2html22"
+  HREF="node4.html">Software requirements</A>
+<LI><A NAME="tex2html23"
+  HREF="node5.html">Installation and configuration</A>
+<UL>
+<LI><A NAME="tex2html24"
+  HREF="node5.html#SECTION00051000000000000000">Examples of modifying default variables</A>
+</UL>
+<LI><A NAME="tex2html25"
+  HREF="node6.html">Datasets handled by iGMT</A>
+<UL>
+<LI><A NAME="tex2html26"
+  HREF="node6.html#SECTION00061000000000000000">Raster data</A>
+<LI><A NAME="tex2html27"
+  HREF="node6.html#SECTION00062000000000000000">Polygon data</A>
+</UL>
+<LI><A NAME="tex2html28"
+  HREF="node7.html">Usage of iGMT</A>
+<UL>
+<LI><A NAME="tex2html29"
+  HREF="node7.html#SECTION00071000000000000000">Menu <TT>File</TT></A>
+<LI><A NAME="tex2html30"
+  HREF="node7.html#SECTION00072000000000000000">Menu <TT>Datasets</TT></A>
+<LI><A NAME="tex2html31"
+  HREF="node7.html#SECTION00073000000000000000">Menu <TT>Data parameters</TT></A>
+<UL>
+<LI><A NAME="tex2html32"
+  HREF="node7.html#SECTION00073010000000000000">Items for <TT>pscoast</TT></A>
+<LI><A NAME="tex2html33"
+  HREF="node7.html#SECTION00073020000000000000">Raster data set items</A>
+<LI><A NAME="tex2html34"
+  HREF="node7.html#SECTION00073030000000000000">Polygon data set items</A>
+</UL>
+<LI><A NAME="tex2html35"
+  HREF="node7.html#SECTION00074000000000000000">Menu <TT>Map parameters</TT></A>
+<UL>
+<LI><A NAME="tex2html36"
+  HREF="node7.html#SECTION00074010000000000000">Item <TT>Region</TT></A>
+<LI><A NAME="tex2html37"
+  HREF="node7.html#SECTION00074020000000000000">Item <TT>Projection</TT></A>
+<LI><A NAME="tex2html38"
+  HREF="node7.html#SECTION00074030000000000000">Items for map grid line and frames</A>
+<LI><A NAME="tex2html39"
+  HREF="node7.html#SECTION00074040000000000000">Miscellaneous plotting items</A>
+</UL>
+<LI><A NAME="tex2html40"
+  HREF="node7.html#SECTION00075000000000000000">Menu <TT>Script</TT></A>
+<LI><A NAME="tex2html41"
+  HREF="node7.html#SECTION00076000000000000000">Menu <TT>GMT help</TT></A>
+</UL>
+<LI><A NAME="tex2html42"
+  HREF="node8.html">Examples</A>
+<UL>
+<LI><A NAME="tex2html43"
+  HREF="node8.html#SECTION00080010000000000000">Hypocenters from the NEIC dataset</A>
+<LI><A NAME="tex2html44"
+  HREF="node8.html#SECTION00080020000000000000">Smith &amp; Sandwell/GTOPO30 topography</A>
+<LI><A NAME="tex2html45"
+  HREF="node8.html#SECTION00080030000000000000">Sea-floor age of M&#252;ller et al.</A>
+<LI><A NAME="tex2html46"
+  HREF="node8.html#SECTION00080040000000000000">Gravity anomalies from <A
+ HREF="node10.html#sandwell97">Sandwell and Smith (1997)</A></A>
+</UL>
+<LI><A NAME="tex2html47"
+  HREF="node9.html">Conclusion</A>
+<LI><A NAME="tex2html48"
+  HREF="node10.html">Bibliography</A>
+<LI><A NAME="tex2html49"
+  HREF="node11.html">Technical details</A>
+<UL>
+<LI><A NAME="tex2html50"
+  HREF="node11.html#SECTION000111000000000000000">Organization of the iGMT software</A>
+<UL>
+<LI><A NAME="tex2html51"
+  HREF="node11.html#SECTION000111010000000000000">Copyright:</A>
+<LI><A NAME="tex2html52"
+  HREF="node11.html#SECTION000111020000000000000">configure_script:</A>
+<LI><A NAME="tex2html53"
+  HREF="node11.html#SECTION000111030000000000000">img2latlongrd.batch:</A>
+<LI><A NAME="tex2html54"
+  HREF="node11.html#SECTION000111040000000000000">The <TT>igmt</TT> file:</A>
+<LI><A NAME="tex2html55"
+  HREF="node11.html#SECTION000111050000000000000">Tcl files:</A>
+<LI><A NAME="tex2html56"
+  HREF="node11.html#SECTION000111060000000000000"><TT>igmt_helper_</TT> files</A>
+<LI><A NAME="tex2html57"
+  HREF="node11.html#SECTION000111070000000000000"><TT>example.dat</TT> and <TT>.ps</TT>:</A>
+<LI><A NAME="tex2html58"
+  HREF="node11.html#SECTION000111080000000000000">Documentation and data</A>
+<LI><A NAME="tex2html59"
+  HREF="node11.html#SECTION000111090000000000000">Colormaps:</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html60"
+  HREF="node12.html">Modifying iGMT</A>
+<UL>
+<LI><A NAME="tex2html61"
+  HREF="node12.html#SECTION000120010000000000000">Using other path names for the locally available data
+  sets.</A>
+<LI><A NAME="tex2html62"
+  HREF="node12.html#SECTION000120020000000000000">Including new raster data sets.</A>
+<LI><A NAME="tex2html63"
+  HREF="node12.html#SECTION000120030000000000000">Including new polygon data sets.</A>
+<LI><A NAME="tex2html64"
+  HREF="node12.html#SECTION000120040000000000000">Last resort.</A>
+</UL>
+<LI><A NAME="tex2html65"
+  HREF="node13.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR> <HR>
+<ADDRESS>
+<I><A HREF="mailto:braun@gfz-potsdam.de"> Alexander Braun</A><I>
+<A HREF="mailto:beck
+er@eps.harvard.edu">,  Thorsten W. Becker</A>, last update on 
+2000-05-12</I>
+<IMG ALIGN=TOP width=110 ALT="iGMT-logo" SRC="igmt_new.gif" > 
+</ADDRESS>
+</BODY>
+</HTML>

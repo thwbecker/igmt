@@ -1,0 +1,5 @@
+pscoast -R0/360/-90/90 -JG30/30/7 -P -Bg60/g30 -S0/162/172 -G177/157/90 -Dc -V > tmp.ps
+ps2epsi tmp.ps
+mv tmp.epsi world.eps
+
+

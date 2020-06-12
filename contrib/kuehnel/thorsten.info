@@ -1,0 +1,20 @@
+Name of the input file: test_3d.dat
+
+Number of columns in the input file: 3
+Number of elements in the file     : 3000
+Number of elements used (!=nan)    : 3000
+
+Extrema  Xmin,Xmax : -2.900000 2.900000
+         Ymin,Ymax : -2.900000 2.900000
+         Zmin(x,y) : 1.249840 (0.500000,0.000000)
+         Zmax(x,y) : 1.922727 (-2.900000,0.000000)
+
+Name of the GMT script file: thorsten.sh
+Name of the PostScript file: thorsten.ps
+
+% of delta Z added/subtr. to/from z extrema: 0.000000
+Colour table used to construct .cpt file   : 12
+Name of the .cpt file                      : thorsten.cpt
+Precision in  the .cpt file                : 3
+
+Plot created with                          : nearneighbour+grdview

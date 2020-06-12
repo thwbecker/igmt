@@ -1,0 +1,33 @@
+#
+# iGMT 1.2 release notes, 07/17/2000
+# Thorsten & Alex
+#
+iGMT 1.2 has been modified quite a bit internally to make it more
+modular and flexible. This has brought about a change in variable
+names. Especially if you have modifications in your
+igmt_siteconfig.tcl file, the following list of changed variable names
+that refer to the location of data files may be helpful:
+
+old_name		new_name
+--------------------------------------------------------------------------------
+gtopodata		raster_data(3)
+agedata			raster_data(4)
+freeair_grav_data	raster_data(5)
+geoid_data		raster_data(6)
+custom_raster_data	raster_data(7)
+seddata			raster_data(8)
+freeair_grav_data_2	raster_data(9)
+
+plate_boundary_data	poly_data(1)
+xysize_data(1)		poly_data(2)
+quake2_color(1)		poly_data(3)
+custom1(5)		poly_parameter(4,5)
+custom2(5)		poly_parameter(5,5)
+cmtdata			poly_data(6)
+hotspotdata		poly_data(7)
+volcanodata		poly_data(8) 
+slab_contour_data	poly_data(9)
+veldata			poly_data(10)
+city_data(1)		poly_data(12)
+city_data(2)		poly_data(13)
+

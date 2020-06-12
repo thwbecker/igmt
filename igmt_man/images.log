@@ -1,0 +1,190 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2000.5.2)  12 MAY 2000 11:17
+**./images.tex
+(./images.tex
+LaTeX2e <1999/12/01> patch level 1
+Babel <v3.6Z> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+
+(/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/base/article.cls
+Document Class: article 1999/09/10 v1.4a Standard LaTeX document class
+(/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 1999/09/10 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 1999/09/10 v1.1b Standard LaTeX ifthen package (DPC)
+) (/home/GFZS1/gnu/teTeX/share/texmf/tex/generic/misc/psfig.sty
+\@unused=\write3
+\ps@stream=\read1
+\p@intvaluex=\dimen103
+\p@intvaluey=\dimen104
+psfig/tex 1.10-dvips
+) (/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 1999/05/28 7.0 (PWD)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count87
+) (/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+) (/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 1999/09/17 v0.992 Input encoding file 
+(/home/GFZS1/gnu/teTeX/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 1999/09/17 v0.992 Input encoding file 
+))
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+
+latex2htmlLength hsize=451.0pt
+
+latex2htmlLength vsize=554.0pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=8.5359pt
+
+latex2htmlLength evensidemargin=8.5359pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 149.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 149.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 149.
+l2hSize :tex2html_wrap_inline466:7.75pt::0.0pt::9.92088pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_inline468:7.75pt::0.0pt::7.26456pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline470:8.25pt::8.25pt::32.20871pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline472:8.25pt::8.25pt::28.94485pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline474:9.5pt::9.5pt::55.00586pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline476:8.25pt::8.25pt::6.64441pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline478:8.2pt::0.0pt::9.62982pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline480:8.33331pt::0.0pt::4.3514pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline484:8.25pt::8.25pt::6.74718pt.
+[9
+
+
+]
+psfig: searching example1.ps for bounding box
+psfig: including example1.ps 
+l2hSize :figure287:284.52756pt::0.0pt::451.0pt.
+[10
+
+
+]
+psfig: searching example2.ps for bounding box
+psfig: including example2.ps 
+l2hSize :figure298:284.52756pt::0.0pt::451.0pt.
+[11
+
+
+]
+psfig: searching example3.ps for bounding box
+psfig: including example3.ps 
+l2hSize :figure309:284.52756pt::0.0pt::451.0pt.
+[12
+
+
+]
+psfig: searching example4.ps for bounding box
+psfig: including example4.ps 
+l2hSize :figure319:284.52756pt::0.0pt::451.0pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline486:8.25pt::8.25pt::39.4622pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline488:8.25pt::8.25pt::15.79582pt.
+[15
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1115 strings out of 10901
+ 13102 string characters out of 72029
+ 58630 words of memory out of 263001
+ 4085 multiletter control sequences out of 10000+0
+ 6376 words of font info for 23 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,6n,19p,508b,285s stack positions out of 300i,100n,500p,50000b,4000s
+
+Output written on images.dvi (15 pages, 3868 bytes).

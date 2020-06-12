@@ -1,0 +1,44 @@
+\documentclass{article}
+\begin{document}
+
+\section{minimax.c}
+
+
+Program to calculate the min/max values of a data set.
+Constructs a gmt cpt file, a shell script and executes it.
+It automatically finds the number of columns in the data 
+(2,3 or 4 are allowed). If 4 is used it is assumed that the data
+structure is ID x y z. You can choose between 13 different color
+tables (switch is). 
+
+\subsection*{Command Line optinons}
+\begin{tabular}[t]{lp{10cm}} 
+-f $<Name>$ & Input file 2, 3 or 4D (default stdin)\\
+-base $<Num>$ &  Percent of basemap larger than the data (Default =
+2.0)\\
+-prefix $<Name>$ & Prefix of all file names (.info, .cpt, .sh, .ps)
+(default mm)\\
+-info $<Name>$  & file name of the info file \\
+-cpt $<Name>$   & file name of the cpt file \\
+-gmt $<Name>$   & file name of the gmt script\\
+-ps $<Name>$    & file name of the PS file \\
+-prec $<Num>$   & precision of the cpt output (default 3)\\
+-is $<Num>$     & switch for different colour scales (default =12)\\
+-add            & switch to add a white segment between 0.0 and zmin
+                   (default=0)\\
+-pc $<Num>$     & percent added to dz to extend the colour scale 
+                  (default = 0.0)\\
+-nan $<Num>$    & ignore these values (default -99.0)\\
+-notrun $<Num>$ & switch to undo the  excution of the script \\
+-xsize $<Num>$  & Plot size x in inches (default 6.0)\\
+-ysize $<Num>$  & Plot size y in inches (default xsize)\\
+-title $<Name>$ & Plot title (default input file name)\\
+-eps $<Num>$    & precision how good to hit nan\\
+-checkz         & for 3 and 4 colums check if z=nan (default check
+                  not)\\
+-psxy           & display 3D data as points (no gridding)\\
+-h$<Num>$       & Number of header lines in the input file. Works only
+for 2D\\
+-columns $<Num>$ & Forces the number of columns in the input file.
+\end{tabular}
+\end{document}

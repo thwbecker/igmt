@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Usage of iGMT</TITLE>
+<META NAME="description" CONTENT="Usage of iGMT">
+<META NAME="keywords" CONTENT="igmt_man">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="igmt_man.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="igmt_man.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY LANG="EN" BACKGROUND="bgr2.gif">
+
+<A NAME="tex2html175"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html171"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html165"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html173"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html176"
+  HREF="node8.html">Examples</A>
+<B>Up:</B> <A NAME="tex2html172"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html166"
+  HREF="node6.html">Datasets handled by iGMT</A>
+<BR> <P>
+
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html177"
+  HREF="node7.html#SECTION00071000000000000000">Menu <TT>File</TT></A>
+<LI><A NAME="tex2html178"
+  HREF="node7.html#SECTION00072000000000000000">Menu <TT>Datasets</TT></A>
+<LI><A NAME="tex2html179"
+  HREF="node7.html#SECTION00073000000000000000">Menu <TT>Data parameters</TT></A>
+<UL>
+<LI><A NAME="tex2html180"
+  HREF="node7.html#SECTION00073010000000000000">Items for <TT>pscoast</TT></A>
+<LI><A NAME="tex2html181"
+  HREF="node7.html#SECTION00073020000000000000">Raster data set items</A>
+<LI><A NAME="tex2html182"
+  HREF="node7.html#SECTION00073030000000000000">Polygon data set items</A>
+</UL>
+<LI><A NAME="tex2html183"
+  HREF="node7.html#SECTION00074000000000000000">Menu <TT>Map parameters</TT></A>
+<UL>
+<LI><A NAME="tex2html184"
+  HREF="node7.html#SECTION00074010000000000000">Item <TT>Region</TT></A>
+<LI><A NAME="tex2html185"
+  HREF="node7.html#SECTION00074020000000000000">Item <TT>Projection</TT></A>
+<LI><A NAME="tex2html186"
+  HREF="node7.html#SECTION00074030000000000000">Items for map grid line and frames</A>
+<LI><A NAME="tex2html187"
+  HREF="node7.html#SECTION00074040000000000000">Miscellaneous plotting items</A>
+</UL>
+<LI><A NAME="tex2html188"
+  HREF="node7.html#SECTION00075000000000000000">Menu <TT>Script</TT></A>
+<LI><A NAME="tex2html189"
+  HREF="node7.html#SECTION00076000000000000000">Menu <TT>GMT help</TT></A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00070000000000000000">
+Usage of iGMT</A>
+</H1>
+
+<P>
+In the following we assume that you have a running version of
+iGMT. The usage will be explained by going through all menu points
+that show up at the start-up screen. The basic idea of iGMT is to
+use GUI facilities to select important plotting parameters, produce a GMT
+script and run it from within the program. When this is done successfully,
+the produced postscript code is converted to a GIF image and then
+displayed. By doing this, it is easy to create a basic script that can
+then be modified for more complex applications when the limits of
+iGMT are reached.
+
+<P>
+The menu list is divided into six pull down menues, <TT>File/Plot</TT>, <TT>  Datasets</TT>, <TT>Data parameters</TT>, <TT>Map parameters</TT>,<TT>Scripting Options</TT> and <TT>GMT man
+  pages</TT> as well as two buttons, <TT>Map it!</TT> and <TT>Quit</TT>.<A NAME="tex2html9"
+  HREF="footnode.html#foot214"><SUP>9</SUP></A>
+<P>
+
+<H2><A NAME="SECTION00071000000000000000">
+Menu <TT>File</TT></A>
+</H2>
+This menue takes care of the main file handling and general
+input/output functions of iGMT. The
+first item, <TT>Create PS ...</TT>, leads to the identical action as
+the <TT>Map it!</TT> button, that is:
+
+<UL>
+<LI>a GMT script is created and executed;
+</LI>
+<LI>if a postscript file was created, this is converted into a GIF;
+</LI>
+<LI>the GIF map display underneath the menu bar is updated.
+</LI>
+</UL>
+The next three items allow the user to create a
+postscript file only or individually display the postscript. This
+might be helpful if you have trouble installing a PS-to-GIF converter.
+The filenames used for this process default to <TT>/tmp/igmt_$USER_tmp.ps</TT> and <TT>/tmp/igmt_$USER_tmp.gif</TT>
+(again, this can be changed in <TT>igmt_configure.tcl</TT> or <TT>  igmt_siteconfig.tcl</TT>). ``<TT>$USER</TT>'' is replaced by the UNIX
+user name to avoid conflicts with write permissions if more than one
+user operates iGMT on a single machine. If the
+produced map files are to be kept, the user can either copy them to 
+another place by hand or use the following two items in the menu list,
+<TT>Save PS file</TT> and <TT>Save GIF file</TT>. 
+
+<P>
+<TT>Load </TT> and <TT>Save</TT> <TT>parameters</TT> use a file to dump or restore almost all
+iGMT parameter settings so that a session can be restarted at a
+later time without having to redo all the fine tuning. iGMT comes
+with four example parameter files (<TT>example?.dat</TT>) that can be
+loaded to experiment with the software.
+<TT>Parameter Format</TT> allows the user to select which version of the iGMT parameter
+files should be loaded and written to allow backward compatibility down to iGMT1.0.
+<TT>Display manual</TT> displays this manual with the postscript software if installed and
+<TT>About iGMT</TT> shows a short description of the software.
+
+<P>
+
+<H2><A NAME="SECTION00072000000000000000"></A><A NAME="datasetsmenu"></A>
+<BR>
+Menu <TT>Datasets</TT>
+</H2>
+
+<P>
+The first item in the <TT>Datasets</TT> menu 
+leads to the raster data choice dialog where the files to choose from
+are those described in section&nbsp;<A HREF="node6.html#datasets">5</A>. The same
+holds true for the polygon datasets of the second item. In contrast to the raster data
+sets, polygon sets can be plotted on top of each other. Future versions
+of iGMT will allow multiple layers of raster data as well.
+
+<P>
+The next part of the <TT>Datasets</TT> menu allows the user to choose the
+custom GMT grd-file he wants to plot, whereas <TT>Change ...</TT> <TT>file</TT> in the next
+six lines modify the respective custom polygon data files.
+
+<P>
+The polygon menu comes with the option of plotting two user defined
+data sets as mentioned above. The following two items in the menu list
+bring up two identical dialogs where the names of the custom <TT>xys</TT> files, the
+columns for latitude, longitude and size as well as a magnification factors for the size
+can be specified. Internally, all data sets are of course handled by a
+trivial <TT>awk</TT> script that can be viewed in the GMT script file or 
+in the source code, that is <TT>igmt_plotting.tcl</TT>.
+
+<P>
+
+<H2><A NAME="SECTION00073000000000000000">
+Menu <TT>Data parameters</TT></A>
+</H2>
+This and the next menu are used to set all the parameters for the data
+and mapping part of the GMT script. 
+
+<P>
+
+<H4><A NAME="SECTION00073010000000000000">
+Items for <TT>pscoast</TT></A>
+</H4>
+
+<P>
+The next three items deal with pscoast. A small subset of the polygon
+data that can be plotted by this routine are mentioned in the 
+<TT>Pscoast</TT>  <TT>polygon</TT>  <TT>selection</TT> list.  The next item allows changing the color of the 
+land and sea coverage, while the last pscoast item is responsible for changing some
+linewidths.
+
+<P>
+
+<H4><A NAME="SECTION00073020000000000000">
+Raster data set items</A>
+</H4>
+Toggle the automatically provided legends for the gravity, age, geoid and 
+topography data sets on and off and select the subset grid resolution. If the value you
+choose (in arc minutes) is smaller than the minimum value supported by
+the specific data set, iGMT increases the value again. There will be
+a warning when a larger number of data points are about to be processed. Keep
+in mind that small machines might have a hard time if the resolution
+is too high and/or the map size is too big. 
+
+<P>
+``Change colormap'' lets the user choose a colormap other than the
+ones used automatically when a predefined raster data file is
+selected. If you change the raster data set to one of the predefined
+ones after choosing your own colormap, you have to reenter the
+selection.  
+
+<P>
+``Create colormap'' uses the GMT tool <TT>grd2cpt</TT> to
+automatically create a colormap for the default grd-file that is set.
+For GMT versions higher than 3.2, the user can select from different colormap
+schemes (see the man page for <TT>grd2cpt</TT>), otherwise it's
+``rainbow''. Since the colormap is based on a histogram of the
+grd-file, colormap creation might take a while with slow machines
+and/or large datasets. 
+
+<P>
+Use ``Shade raster data'' to
+toggle the shading that is done for topographic and gravity datasets
+using <TT>grdgradient</TT>.
+
+<P>
+
+<H4><A NAME="SECTION00073030000000000000">
+Polygon data set items</A>
+</H4>
+The next three menu items change roughly what they say, <TT>Symbols...</TT>, <TT>Sizes...</TT> and
+<TT>Color</TT> of the polygon data. Sizes are in fractions of the mapwidth and get multiplied
+by another factor with the size column of the <TT>xys</TT> data.
+The symbols types that are implemented are, again, only a subset of what GMT can do.<A NAME="tex2html10"
+  HREF="footnode.html#foot442"><SUP>10</SUP></A>Linewidth changing only works for the plate
+boundaries, slab contours, velocity vectors 
+and the rivers and national boundaries of pscoast so far. 
+Name tags can be switched on and off for hot-spots and volcano data sets with the
+next item whereas the following, ``Velocity vector parameters'' is used to adjust the 
+parameters for the GPS/psvelomeca vectors, WSM parameters can be used to select the 
+plotting type for stress data, the minimum quality and the types (<A
+ HREF="node10.html#muellerb97">Mueller et&nbsp;al., 1997</A>). Finally,
+``City type'' selects between the full and the restricted city data set.
+
+<P>
+
+<H2><A NAME="SECTION00074000000000000000">
+Menu <TT>Map parameters</TT></A>
+</H2>
+
+<H4><A NAME="SECTION00074010000000000000">
+Item <TT>Region</TT></A>
+</H4>
+This item brings up the region selection dialog. Where the eastern,
+northern etc. boundaries are self-explaining, the ``Center of map
+projection'' is needed for whole earth viewing projections. Clicking
+on ``The whole thing!'' expands the geographical boundaries as far as
+possible for the checked projection. ````Square'' it'' attempts to make
+a square-like map by setting the difference between the boundaries
+equal. ``Center focus in region'' sets the center of map projection
+values to the averages of the boundaries.
+
+<P>
+
+<H4><A NAME="SECTION00074020000000000000">
+Item <TT>Projection</TT></A>
+</H4>
+The projection order chosen for the dialog box follows the GMT manual
+<BR>
+<DIV ALIGN="CENTER">
+URL: <TT>http://www.soest.hawaii.edu/wessel/gmt/gmt_doc.html</TT></DIV>
+
+<BR>
+closely. Projections themselves are explained briefly in the <TT>pscoast</TT> man page. The last
+check-box, ``custom projection'', allows the user to specify the
+projection with the magnification factor in the GMT format
+explicitly. This might be needed since formatting is not perfectly
+done by iGMT and not all GMT projections are implemented. 
+Some of the projections adjust the geographic region to be plotted as suitable.
+
+<P>
+
+<H4><A NAME="SECTION00074030000000000000">
+Items for map grid line and frames</A>
+</H4>
+<TT>Grid lines</TT> and <TT>Frame</TT>  <TT>annotation</TT> are on/off switches.
+By default, the gridlines are twice as densely spaced as the outer
+annotation intervals along the map frame. Change this in <TT>  igmt_plotting.tcl</TT>, if you like. The mapscale the user can switch on and off
+is positioned in the lower left corner of the map and calculated to be correct at center
+latitudes.
+
+<P>
+
+<H4><A NAME="SECTION00074040000000000000">
+Miscellaneous plotting items</A>
+</H4>
+Add a title to the plot and change the page size and orientation
+here. The offsets in <IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$x$"> and <IMG
+ WIDTH="13" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$y$"> direction default to one inch each, which is
+usually ok. Don't expect perfect results in terms of title placement or
+centering of the final map on the produced postscript file, though. Reasonable
+results should be achievable with the built in functions of iGMT, while
+final copies will probably need some hands-on modification of the GMT script. 
+
+<P>
+
+<H2><A NAME="SECTION00075000000000000000">
+Menu <TT>Script</TT></A>
+</H2>
+
+<P>
+The first item, <TT>Show</TT> <TT>GMT</TT>  <TT>script</TT>, shows the file that is created
+and executed by iGMT to get GMT to produce the postscript file we
+are viewing. This is intended to do two things: Show the inexperienced
+user what can be done (in addition to the introduction in
+the GMT manual) and give the experienced user a fast tool to get to a
+start script for more complicated applications. This file is called 
+<TT>$HOME/igmt_parameters.dat</TT> by default. <TT>Add stuff to the
+  pscoast line</TT> lets the user add additional commands to the last <TT>  pscoast</TT> command of the script file without having to exit from
+iGMT and run the script independently. The file  presented by <TT>  Show script errors</TT> contains the stderr output of the GMT commands
+invoked and should be helpful for debugging. By default, GMT is
+``verbose''. 
+<TT>GMT version</TT> lets the user change between the old 
+GMT version 3.0 and one of the newer versions, such as 3.3. 
+The last item of this menu
+lets the user switch the GMT logo on and off. By default, it is
+off since it would interfere with the colorbars.
+
+<P>
+
+<H2><A NAME="SECTION00076000000000000000">
+Menu <TT>GMT help</TT></A>
+</H2>
+This menu list is intended to provide fast access to the GMT man
+pages for reference. At the time of the first call, a temporary file
+is created from the <TT>man</TT> command and afterwards displayed every
+time the user selects the same command man page again. If the GMT man pages
+are not in the usual place where the <TT>man</TT> command looks for them, 
+uncomment the line 
+
+<P>
+Finally, the two buttons on the right hand side of the menu bar do what they say.
+
+<P>
+<HR>
+<A NAME="tex2html175"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html171"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html165"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html173"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html176"
+  HREF="node8.html">Examples</A>
+<B>Up:</B> <A NAME="tex2html172"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html166"
+  HREF="node6.html">Datasets handled by iGMT</A>
+
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I><A HREF="mailto:braun@gfz-potsdam.de"> Alexander Braun</A><I>
+<A HREF="mailto:beck
+er@eps.harvard.edu">,  Thorsten W. Becker</A>, last update on 
+2000-05-12</I>
+<IMG ALIGN=TOP width=110 ALT="iGMT-logo" SRC="igmt_new.gif" > 
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Technical details</TITLE>
+<META NAME="description" CONTENT="Technical details">
+<META NAME="keywords" CONTENT="igmt_man">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="igmt_man.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="igmt_man.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY LANG="EN" BACKGROUND="bgr2.gif">
+
+<A NAME="tex2html243"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html239"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html233"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html241"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html244"
+  HREF="node12.html">Modifying iGMT</A>
+<B>Up:</B> <A NAME="tex2html240"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html234"
+  HREF="node10.html">Bibliography</A>
+<BR> <P>
+
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html245"
+  HREF="node11.html#SECTION000111000000000000000">Organization of the iGMT software</A>
+<UL>
+<LI><A NAME="tex2html246"
+  HREF="node11.html#SECTION000111010000000000000">Copyright:</A>
+<LI><A NAME="tex2html247"
+  HREF="node11.html#SECTION000111020000000000000">configure_script:</A>
+<LI><A NAME="tex2html248"
+  HREF="node11.html#SECTION000111030000000000000">img2latlongrd.batch:</A>
+<LI><A NAME="tex2html249"
+  HREF="node11.html#SECTION000111040000000000000">The <TT>igmt</TT> file:</A>
+<LI><A NAME="tex2html250"
+  HREF="node11.html#SECTION000111050000000000000">Tcl files:</A>
+<LI><A NAME="tex2html251"
+  HREF="node11.html#SECTION000111060000000000000"><TT>igmt_helper_</TT> files</A>
+<LI><A NAME="tex2html252"
+  HREF="node11.html#SECTION000111070000000000000"><TT>example.dat</TT> and <TT>.ps</TT>:</A>
+<LI><A NAME="tex2html253"
+  HREF="node11.html#SECTION000111080000000000000">Documentation and data</A>
+<LI><A NAME="tex2html254"
+  HREF="node11.html#SECTION000111090000000000000">Colormaps:</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000110000000000000000">
+Technical details</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION000111000000000000000">
+Organization of the iGMT software</A>
+</H2>
+
+<P>
+After unpacking the <TT>igmt_v1.2.tar</TT> file the directory should look
+something like this
+
+<P>
+<PRE>
+&gt; ls -F
+01_02-98.cmt                     example4.ps.gz                   igmt_helper_handle_gmtdefaults*
+COPYING                          formatcpt.awk                    igmt_helper_rmtmp_silent*
+COPYRIGHT                        gps.vel                          igmt_init.tcl
+README.TXT                       hotspots.dat                     igmt_iomisc.tcl
+allslabs_rum.gmt                 igmt*                            igmt_menus.tcl
+colminmax.awk                    igmt.tcl                         igmt_parameters.tcl
+colormaps/                       igmt_configure.tcl               igmt_plotting.tcl
+configure_script*                igmt_datasets.tcl                img2latlongrd.batch*
+example1.dat                     igmt_def.gif                     manual.ps
+example1.ps.gz                   igmt_gmtdefaults_3.0             nuvel.yx
+example2.dat                     igmt_gmtdefaults_3.1             sortwsm.awk
+example2.ps.gz                   igmt_gmtdefaults_3.2             volcanoes.dat
+example3.dat                     igmt_gmtdefaults_3.3             wcity.dat
+example3.ps.gz                   igmt_helper_checkfile*           wcity_major.dat
+example4.dat                     igmt_helper_create_man_page*
+</PRE>where the <TT>colormaps</TT> directory contains the color tables for GMT.
+<PRE>
+&gt; ls 
+bathymetry.cpt     col.11.cpt         col.23.cpt         col.35.cpt         sediment.2.cpt
+col.00.cpt         col.12.cpt         col.24.cpt         col.36.cpt         sediment.cpt
+col.01.cpt         col.13.cpt         col.25.cpt         col.37.cpt         tomo.cpt
+col.02.cpt         col.14.cpt         col.26.cpt         col.th.1.cpt       tomo2.cpt*
+col.03.cpt         col.15.cpt         col.27.cpt         colgeoid.cpt       topo.bw.cpt
+col.04.cpt         col.16.cpt         col.28.cpt         geoid.cpt          topo.cpt
+col.05.cpt         col.17.cpt         col.29.cpt         geoid2.cpt         topo1.cpt
+col.06.cpt         col.18.cpt         col.30.cpt         geoid3.cpt         topo2.cpt
+col.07.cpt         col.19.cpt         col.31.cpt         geoid5.cpt         topo3.cpt
+col.08.cpt         col.20.cpt         col.32.cpt         gravity.cpt        topo4.cpt
+col.09.cpt         col.21.cpt         col.33.cpt         seafloor_age.cpt
+col.10.cpt         col.22.cpt         col.34.cpt         seafloor_age2.cpt
+</PRE>
+<P>
+The files in this distribution can be classified as follows:
+
+<P>
+
+<H4><A NAME="SECTION000111010000000000000">
+Copyright:</A>
+</H4> <TT>COPYING</TT> and <TT>COPYRIGHT</TT> deal with legal issues.
+        iGMT is distributed under the GNU public license but has to be used
+        in accordance with the Student Pugwash Pledge, see the file <TT>COPYING</TT>.
+
+<H4><A NAME="SECTION000111020000000000000">
+configure_script:</A>
+</H4> This short script is supposed to take over the 
+installation process as described in sec.&nbsp;<A HREF="node5.html#install">4</A>.
+
+<P>
+
+<H4><A NAME="SECTION000111030000000000000">
+img2latlongrd.batch:</A>
+</H4> Script that is supposed to be a patch when 
+<TT>img2latlongrd</TT> is not available.
+
+<P>
+
+<H4><A NAME="SECTION000111040000000000000">
+The <TT>igmt</TT> file:</A>
+</H4> A <TT>ksh</TT> script that is used to
+check if the environment variable <TT>$igmt_root</TT> and <TT>wish</TT> is
+available at the places iGMT is looking. If all is fine, <TT>wish</TT>
+is invoked with <TT>igmt.tcl</TT>. <TT>igmt_def.gif</TT> is the start-up
+screen. 
+
+<P>
+
+<H4><A NAME="SECTION000111050000000000000">
+Tcl files:</A>
+</H4> All files with the <TT>tcl</TT> extension contain
+the tcl code that runs iGMT. <TT>igmt.tcl</TT> is the main file, it
+contains <TT>source</TT> commands and builds up some frames. <TT>  igmt_configure.tcl</TT> has all global variables and the default
+settings for plotting whereas <TT>igmt_init.tcl</TT> handles the startup
+sequence. The file <TT>igmt_menu.tcl</TT> holds the definition for the
+main menu line and the procedures found in <TT>igmt_datasets.tcl</TT>,
+<TT>igmt_parameters.tcl</TT> and <TT>igmt_plotting.tcl</TT> correspond
+roughly to all possible actions in the individual pull-down
+menus. Finally, <TT>igmt_iomisc.tcl</TT> contains most of the input/output 
+routines and some additional tcl procedures. 
+
+<P>
+All of these files should be fairly well commented so that we won't go
+into any detail here. 
+
+<P>
+
+<H4><A NAME="SECTION000111060000000000000">
+<TT>igmt_helper_</TT> files</A>
+</H4> These contain small <TT>ksh</TT>
+scripts that are called by iGMT' tcl routines and handle more
+operating system based processes. Most of them could be integrated
+into the main tcl code but it seemed more transparent for possible
+porting to other operating systems to keep them external. If you have to
+change the default locations where ksh resides from <TT>/bin/ksh</TT> you might
+have a look at the script we provide at our website under the bugs and problem
+page.
+
+<P>
+
+<H4><A NAME="SECTION000111070000000000000">
+<TT>example.dat</TT> and <TT>.ps</TT>:</A>
+</H4> The <TT>dat</TT> files
+contain the parameter dump that was created with iGMT after the
+examples presented in section&nbsp;<A HREF="node8.html#examples">7</A> were produced. The
+postscript files are packed with <TT>gzip</TT> and correspond to the
+shrinked figures in this manual and are not identical to the real
+postscript files produced (they were too big to be included in the
+distribution).
+
+<H4><A NAME="SECTION000111080000000000000">
+Documentation and data</A>
+</H4>
+The file <TT>manual.ps</TT> is the manual you are reading as a postscript file. 
+<TT>nuvel.yx</TT> is the modified plate boundary polygon file after <A
+ HREF="node10.html#demets90">DeMets et&nbsp;al. (1990)</A>, <TT>01_02-98.cmt</TT> 
+contains the Harvard CMT double couple fault plane solution
+for the first 60 days of 1998 as an example, <TT>vocanoes.dat</TT> the
+volcano locations after <A
+ HREF="node10.html#simkin94">Simkin and Siebert (1994)</A>, <TT>allslabs_rum.gmt</TT> the slab
+seismicity contours of <A
+ HREF="node10.html#gudmundsson98">Gudmundsson and Sambridge (1998)</A> and <TT>hotspots.dat</TT> the
+hotspot list of <A
+ HREF="node10.html#steinberger98b">Steinberger (1998)</A>.
+
+<P>
+
+<H4><A NAME="SECTION000111090000000000000">
+Colormaps:</A>
+</H4> The <TT>colormaps</TT> directory contains the colormaps that are
+used by iGMT to map the default datasets. <TT>col.00.cpt</TT> through <TT>col.35.cpt</TT> are 
+generic colormaps which span the data range from <IMG
+ WIDTH="59" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$-1\ldots1$">. If you want to convert these colormaps to
+suit your data, use an awk script like <TT>colminmax.awk</TT> which comes with the iGMT distribution. 
+<PRE>
+# script to convert the data range of colorscale files for GMT
+# by rescaling
+BEGIN{
+  if(min==0)min=-1.;
+  if(max==0)max=1.;
+  mean=(max+min)/2.;
+  range=(max-min)/2.;
+  printevery=50;
+}
+{
+  if(NR&lt;256){
+    if(printevery - NR &gt; 0)
+      print($1*range+mean,$2,$3,$4,$5*range+mean,$6,$7,$8,$9);
+    else {
+      print($1*range+mean,$2,$3,$4,$5*range+mean,$6,$7,$8,$9,"L");
+      printevery=NR+printevery;
+    }
+  }
+  else
+    print($0);
+
+}
+</PRE>If your data sets contains values between <IMG
+ WIDTH="25" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$-2$"> and 3, say, and you would like to use the
+rainbow colored colorscale <TT>col.13.cpt</TT>, use
+<BR> <DIV ALIGN="CENTER">
+<TT>awk -f $igmt_root/colminmax.awk min=-2 max=3 ...
+<BR>$igmt_root/colormaps/col.13.cpt &gt; new_colormap.cpt</TT>. 
+<BR>
+</DIV>
+Here, ``...'' means that the above should be in one line.
+
+<P>
+Also, you might want to use the <TT>grd2cpt</TT> function of GMT that
+can be accessed over <TT>create colormap</TT> menu item.
+
+<P>
+<HR>
+<A NAME="tex2html243"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html239"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html233"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html241"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html244"
+  HREF="node12.html">Modifying iGMT</A>
+<B>Up:</B> <A NAME="tex2html240"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html234"
+  HREF="node10.html">Bibliography</A>
+
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I><A HREF="mailto:braun@gfz-potsdam.de"> Alexander Braun</A><I>
+<A HREF="mailto:beck
+er@eps.harvard.edu">,  Thorsten W. Becker</A>, last update on 
+2000-05-12</I>
+<IMG ALIGN=TOP width=110 ALT="iGMT-logo" SRC="igmt_new.gif" > 
+</ADDRESS>
+</BODY>
+</HTML>

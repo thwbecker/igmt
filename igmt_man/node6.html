@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Datasets handled by iGMT</TITLE>
+<META NAME="description" CONTENT="Datasets handled by iGMT">
+<META NAME="keywords" CONTENT="igmt_man">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="igmt_man.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="igmt_man.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY LANG="EN" BACKGROUND="bgr2.gif">
+
+<A NAME="tex2html157"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html153"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html147"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html155"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html158"
+  HREF="node7.html">Usage of iGMT</A>
+<B>Up:</B> <A NAME="tex2html154"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html148"
+  HREF="node5.html">Installation and configuration</A>
+<BR> <P>
+
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html159"
+  HREF="node6.html#SECTION00061000000000000000">Raster data</A>
+<LI><A NAME="tex2html160"
+  HREF="node6.html#SECTION00062000000000000000">Polygon data</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00060000000000000000"></A><A NAME="datasets"></A>
+<BR>
+Datasets handled by iGMT
+</H1>
+
+<P>
+While iGMT is lacking the database query functions of full blown GIS
+systems it is capable of combining multiple geoscientific data sets
+and handling large amounts of data in an efficient way. (Indeed, this
+is an achievement of the GMT software and iGMT's approach does not
+constrain this feature.) Excellent data is available on the web these
+days and iGMT is based upon these publicly available collections.
+Since GMT has grown into a <EM>de-facto</EM> standard in parts of the
+geophysical community, it seems natural to use GMT to handle the data.
+
+<P>
+With the requirements that are explained in section&nbsp;<A HREF="node4.html#req">3</A> 
+you should now be able to interactively
+use the GMT command <TT>pscoast</TT> that is used for plotting maps of
+land and sea coverage with political boundaries etc. <A NAME="tex2html7"
+  HREF="footnode.html#foot428"><SUP>7</SUP></A>
+<P>
+If you want to take advantage of the built-in handling capabilities 
+for various datasets, you need to get the data or tell iGMT where it
+can find it if the data is already around on your system. All path
+names can be changed together with all other global variables in the
+<TT>igmt_configure.tcl</TT> or a site specific <TT>  igmt_siteconfig.tcl</TT> file (see sec.&nbsp;<A HREF="node5.html#install">4</A>).  
+Furthermore, the user has
+the option to specify one raster grd-file and two custom polygon data sets.
+The <TT>igmt_configure.tcl</TT> is commented so it should be easy to find what
+you are looking for. In addition, some of the datasets
+require special converting software. We have put some links to datasets on our webpage for
+your convenience.
+
+<P>
+
+<H2><A NAME="SECTION00061000000000000000">
+Raster data</A>
+</H2>
+
+<P>
+Besides <TT>pscoast</TT> land and sea coverage and shorelines, 
+the following raster data files are supported:
+
+<P>
+<DL>
+<DT><STRONG>ETOPO5 topography:</STRONG></DT>
+<DD>The ETOPO5 topography/bathymetry 
+(<A
+ HREF="node10.html#etopo5">NOAA, 1988</A>, available at <TT>http://www.ngdc.noaa.gov/</TT>)
+is supported in combination with the <TT>grdraster</TT> tool which is (as <TT>psvelomeca</TT>)
+part of the supplementary package that is
+available together with the GMT main distribution. The ETOPO5 data set
+is about 19MB in i2 binary format.
+
+<P>
+</DD>
+<DT><STRONG>``GTOPO30'' topography:</STRONG></DT>
+<DD>The GTOPO30 DEM model (<A
+ HREF="node10.html#gtopo30">EDC, 1996</A>) was greatly expanded
+  by <A
+ HREF="node10.html#smith97">Smith and Sandwell (1997)</A>. It is supported in the form suggested by Smith &amp;
+  Sandwell using <TT>img2latlongrd</TT>. <A NAME="tex2html8"
+  HREF="footnode.html#foot429"><SUP>8</SUP></A> 
+  Data and other tools can be found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://topex.ucsd.edu/marine_topo/mar_topo.html</TT>.</DIV>
+
+<BR>
+The img format file is 137MB.
+
+<P>
+</DD>
+<DT><STRONG>Sea-floor age:</STRONG></DT>
+<DD>The sea-floor age data of  <A
+ HREF="node10.html#mueller97">M&#252;ller et&nbsp;al. (1997)</A> was
+  published as a GMT <TT>grdfile</TT> and is used in the form as
+  available at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://Omphacite.es.su.oz.au/StaffProfiles/dietmar/Agegrid/agegrid.html</TT>.</DIV>
+
+<BR>
+The data is about 23MB in grd format and roughly 10MB in i2 binary
+  which could be read by <TT>grdraster</TT> as ETOPO5 (to do this, change
+  the corresponding lines in <TT>igmt_plotting.tcl</TT>). By default, iGMT expects the global, grid-file version
+  (age data version 1.5).
+
+<P>
+</DD>
+<DT><STRONG>Free-air gravity:</STRONG></DT>
+<DD>Sea-floor gravity anomalies as published by
+  <A
+ HREF="node10.html#sandwell97">Sandwell and Smith (1997)</A> are used as a <TT>grdfile</TT> as found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://topex.ucsd.edu/marine_grav/mar_grav.html</TT>.</DIV>
+
+<BR>
+As GTOPO30, this file is 137MB big.
+
+<P>
+</DD>
+<DT><STRONG>Geoid:</STRONG></DT>
+<DD>iGMT supports plotting the geoid and comes with an adequate colormap. 
+  As an example, we evalutated the spherical harmonic coefficients of the EGM360 model of 
+  <A NAME="tex2html161"
+  HREF="node10.html#rapp96">Rapp et&nbsp;al. (1996</A>,<A NAME="tex2html162"
+  HREF="node10.html#rapp91">1991)</A> from order 2 to 360, corrected for the
+  hydrostatic shape of the Earth (<A
+ HREF="node10.html#nakiboglu82">Nakiboglu, 1982</A>),
+  and included them in quarter arc minute resolution
+  as a GMT grd-file in our raster data set. Alternatively, we also offer
+  the OSU91A model of <A
+ HREF="node10.html#rapp91">Rapp et&nbsp;al. (1991)</A> as a ``typical'' geoid
+  representation grd-file. You can download both files from our website.
+
+<P>
+</DD>
+<DT><STRONG>Global free-air gravity:</STRONG></DT>
+<DD>Derived from the EGM360 model of 
+  <A NAME="tex2html163"
+  HREF="node10.html#rapp96">Rapp et&nbsp;al. (1996</A>,<A NAME="tex2html164"
+  HREF="node10.html#rapp91">1991)</A> from order 2 to 360, 
+  and included in quarter arc minute resolution as a GMT grd-file in our raster data set. 
+  Obtained from the file above by multiplying the spherical harmonic
+  coefficients by <IMG
+ WIDTH="80" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$g(l-1)/R$"> where <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$g$"> 
+  is gravitational acceleration, <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$R$"> the radius of the Earth and <IMG
+ WIDTH="9" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$l$"> 
+  the order of the spherical harmonics.
+
+<P>
+You can download this file from our website.
+
+<P>
+</DD>
+<DT><STRONG>Sediment thickness:</STRONG></DT>
+<DD>Sediment thickness is important for seismological studies and
+  the comparison between halfspace cooling model prediction and bathymetry. We have included a 
+  data handling routines for the <A
+ HREF="node10.html#laske97">Laske and Masters (1997)</A> dataset. The data itself is availbale as a <TT>grd</TT>-file
+  on our website.
+
+<P>
+</DD>
+<DT><STRONG>Custom data:</STRONG></DT>
+<DD>You can choose an arbitrary GMT grd file to be
+  plotted as the base data layer and provide your own colormap, too.
+</DD>
+</DL>
+
+<P>
+
+<H2><A NAME="SECTION00062000000000000000">
+Polygon data</A>
+</H2>
+
+<P>
+Some example handling procedures for polygon data are included as well:
+
+<P>
+<DL>
+<DT><STRONG>Plate boundary data:</STRONG></DT>
+<DD>The plate boundaries as given by
+  <A
+ HREF="node10.html#demets90">DeMets et&nbsp;al. (1990)</A> are part of the iGMT distribution as the file <TT>    nuvel.yx</TT> in a slightly modified form. Any polygon data file
+  supported by <TT>psxy</TT> can be
+  substituted for this data set.
+
+<P>
+</DD>
+<DT><STRONG>Hotspot locations:</STRONG></DT>
+<DD>iGMT uses a list of hotspots compiled by <A
+ HREF="node10.html#steinberger98b">Steinberger (1998)</A> 
+  to plot their location and a name tag, if selected.
+
+<P>
+</DD>
+<DT><STRONG>Volcano locations:</STRONG></DT>
+<DD>The Smithsonian Institution Global Volcanism Program's list of volcanoes 
+  (<A
+ HREF="node10.html#simkin94">Simkin and Siebert, 1994</A>) is supported
+  in the form found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.volcano.si.edu/gvp/volcdata/index.htm</TT>.</DIV>
+
+<BR>
+As for the hotspot data, the user can select a symbol, the color and toggle a
+  name tag. A version of this list as of April 1998 is included. If
+  you want to install an update, just download the data from the web
+  and replace the adequate file. The same holds true for the
+  earthquake catalogs since iGMT was programmed to handle the original data.
+
+<P>
+</DD>
+<DT><STRONG>CMT fault plane solutions:</STRONG></DT>
+<DD>iGMT uses <TT>psvelomeca</TT> from
+  the GMT supplements package to plot the double couple part of the Harvard CMT 
+  centroid moment tensor solutions (e.g. <A
+ HREF="node10.html#cmtreview">Dziewonski and Woodhouse, 1983</A>) as found at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.seismology.harvard.edu/CMTsearch.html</TT>.</DIV>
+
+<BR>
+A list of all events in the catalog of the first 60 days of 1998 is included
+  as an example.
+
+<P>
+</DD>
+<DT><STRONG>Significant earthquakes:</STRONG></DT>
+<DD><A
+ HREF="node10.html#ngdc_sig">Dunbar et&nbsp;al. (1997)</A> have compiled a list
+  of significant earthquakes starting 2000 B.C., their catalog is accesible at
+<BR>  <DIV ALIGN="CENTER">
+<TT>http://www.ngdc.noaa.gov/seg/hazard/sigintro.html</TT>.</DIV>
+
+<BR>
+After
+  quoting all lines without data by inserting a hash sign ("# "),
+  the format produced by this engine  can be read directly into
+  iGMT. (Internally, all that iGMT does is to use awk to check if
+  lines are quoted and for exporting of the relevant columns.) iGMT
+  plots only earthquakes that have a magnitude assigned, you might
+  want to change the relevant <TT>awk</TT> lines in <TT>igmt_plotting.tcl</TT>.
+
+<P>
+</DD>
+<DT><STRONG>PDE earthquakes:</STRONG></DT>
+<DD>The United States Geological Survey keeps
+  different hypocenter catalogs at the National Earthquake Information
+  Center
+<BR>  <DIV ALIGN="CENTER">
+URL: <TT>http://wwwneic.cr.usgs.gov/neis/epic/epic_global.html</TT>).</DIV>
+
+<BR>
+The ``Screen File Format'' can be read by iGMT.
+
+<P>
+</DD>
+<DT><STRONG>Slab contours:</STRONG></DT>
+<DD><A
+ HREF="node10.html#gudmundsson98">Gudmundsson and Sambridge (1998)</A> define 
+contours of the upper edge of subducting slabs from the relocated hypocenters of 
+<A
+ HREF="node10.html#engdahl98">Engdahl et&nbsp;al. (1998)</A>. 
+These seismicity contours are available from
+<BR>
+<DIV ALIGN="CENTER">
+<TT>http://rses.anu.edu.au/seismology/projects/RUM/rum_download.html</TT>,</DIV>
+
+<BR>
+we have included them in a format readable by GMT.
+
+<P>
+</DD>
+<DT><STRONG>Velocity vectors:</STRONG></DT>
+<DD>Simon McClusky provided a routine that handles 
+  velocity solution plotting using <TT>psvelomeca</TT>. A typical application would
+  be the mapping of results from GPS studies such as the <TT>gps.vel</TT> global data example
+  we have included.
+
+<P>
+</DD>
+<DT><STRONG>World Stress Map:</STRONG></DT>
+<DD>The World Stress Map Project
+  (e.g., <A
+ HREF="node10.html#zoback92">Zoback, 1992</A>) compiles stress measurements all over the
+  world. We supply a routine that can read the WSM's ASCII format data
+  base (<A
+ HREF="node10.html#muellerb97">Mueller et&nbsp;al., 1997</A>). It plots either only the compressive
+  directions of the horizontal stress regime (as it is commonly done),
+  or different style vector pairs on basis of the focal mechanism
+  classification for the horizontal plane projection. The different
+  vector style plots two equal length vectors (one compressional, one
+  extensional) if the focal mechanism is labelled ``strike-slip'', one
+  compressional (extensional) vector if the focal mechanism is purely
+  compressional (extensional), and it uses one half-length and one
+  full length vector for compressional or extensional mechanisms with
+  a strike-slip component in the horizontal plane.
+
+<P>
+</DD>
+<DT><STRONG>Major cities:</STRONG></DT>
+<DD>We have supplied a (rather inaccurate) data set
+  of 726 cities with their names and locations.  This data set can be
+  restricted to the major 235 cities. The corresponding data sets are
+  <TT>wcity.dat</TT> and <TT>wcity_major.dat</TT> (the latter is a subset
+  of the full data set).
+
+<P>
+</DD>
+<DT><STRONG>Custom ``xys'' files:</STRONG></DT>
+<DD>iGMT can plot two custom ASCII data files
+  specified by the user.  They have to be in a columnar ASCII format
+  (separator is a white space or tab, comment lines can be introduced
+  by a number sign, ``#''), similar to the polygon data described
+  above, and need at least longitude and latitude in every line. Size
+  values can be given optionally, hence ``xys''.  (For instance, for
+  earthquakes hypocentres you would give longitude, latitude, and
+  magnitude. The magnitude will be used to scale each symbol that is
+  plotted on your map. To change all symbol sizes in an absolute
+  sense, you can choose <TT>sizes polygon data</TT> in the <TT>Data
+    parameters</TT> menu.  When you use polygon drawing by choosing
+  ``line'' as a symbol in <TT>Symbols polygon data</TT> for your polygon
+  file, the <TT>sizes polygon data</TT> item will change the width of the
+  line.) 
+
+<P>
+You can interactively choose the column numbers (ie., use the eight
+  and ninth column instead of the first and second) which hold the x
+  and y values, if you leave the column number for size blank,
+  xy-plotting is assummed. The magnification factor is a
+  pre-multiplier for the size entry that is later modified by the
+  standard size of the symbols (see also section&nbsp;<A HREF="node7.html#datasetsmenu">6.2</A>).
+
+<P>
+</DD>
+</DL>
+
+<P>
+Technical details how these files are handled are explained later in
+the text and in the comments found in <TT>igmt_plotting.tcl</TT>.
+
+<P>
+<HR>
+<A NAME="tex2html157"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html153"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html147"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html155"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html158"
+  HREF="node7.html">Usage of iGMT</A>
+<B>Up:</B> <A NAME="tex2html154"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html148"
+  HREF="node5.html">Installation and configuration</A>
+
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I><A HREF="mailto:braun@gfz-potsdam.de"> Alexander Braun</A><I>
+<A HREF="mailto:beck
+er@eps.harvard.edu">,  Thorsten W. Becker</A>, last update on 
+2000-05-12</I>
+<IMG ALIGN=TOP width=110 ALT="iGMT-logo" SRC="igmt_new.gif" > 
+</ADDRESS>
+</BODY>
+</HTML>

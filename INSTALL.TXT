@@ -1,0 +1,66 @@
+
+Installation Instructions for iGMT 1.2
+
+This is an excerpt from the manual, manual.ps
+For additional information, refer to our website
+
+www.seismology.harvard.edu/~becker/igmt
+
+Installation and configuration
+
+To get iGMT running, extract the distribution igmt_v1.2.tar.gz
+(or, alternatively, its slim version igmt_v1.2_wo.tar.gz) -if you have not
+already done so- in a directory where you typically store Tcl/Tk
+scripts. This could well be at the single user level on multi-user
+systems (non-root priveliges installation) since the package itself is
+relatively small. Installing multiple copies would allow every user to
+modify the iGMT code themselves.
+
+From here, you can either choose to use the script 
+configure_script which we provide or proceed to do a few changes
+manually. If you choose the "automatic" way, you will have to enter
+the iGMT directory that you just created by expanding the tar-file and 
+type 
+
+./configure_script. 
+
+After answering a couple of questions, 
+you should be all set. 
+
+If, on the other hand, you would like to stay in control simply check
+the following three steps:
+
+1.  An environment variable  \$igmt_root can be set to point to
+  the directory where iGMT resides. With  csh this would be done
+  by adding a line like
+  
+	setenv igmt_root $HOME/tcltk/igmt_dir/
+
+  to the  $HOME/.login file. For  ksh you would add
+  
+	export igmt_root=$HOME/tcltk/igmt_dir/
+
+  to the  .profile file. Alternatively, you will have to modify the 
+  main iGMT script (startup script file)  igmt and change line 39
+  to point to the root directory.
+
+2. The  igmt script calls the Tcl/Tk shell  wish using the
+  explicit call to  /usr/bin/wish in line 75. If  wish is
+  somewhere else on your system (try typing  which wish or 
+    type which), either change the corresponding line in  igmt or
+  set the another environment variable  $wish_cmd. After verifying the
+  settings,  igmt should be executable and iGMT can be started by
+  typing  $igmt_root/igmt at the command line. (Of course this
+  can be facilitated by adding an alias or linking 
+    $igmt_root/igmt to some place where your shell looks for
+  executables.)
+
+3.  NEW: iGMT needs to know where the GMT binaries are located. In a similar 
+fashion as above for  wish, find out where that is (say, in  /usr/local/bin) 
+and add a line like
+
+ set gmtbins /usr/local/bin
+
+to your  igmt_siteconfig.tcl file that holds all the necessary modifications
+to get iGMT running in your environment.
+

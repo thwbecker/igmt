@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Modifying iGMT</TITLE>
+<META NAME="description" CONTENT="Modifying iGMT">
+<META NAME="keywords" CONTENT="igmt_man">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="igmt_man.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="igmt_man.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY LANG="EN" BACKGROUND="bgr2.gif">
+
+<A NAME="tex2html265"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html261"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html255"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html263"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html266"
+  HREF="node13.html">About this document ...</A>
+<B>Up:</B> <A NAME="tex2html262"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html256"
+  HREF="node11.html">Technical details</A>
+<BR> <P>
+
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><UL>
+<LI><UL>
+<LI><A NAME="tex2html267"
+  HREF="node12.html#SECTION000120010000000000000">Using other path names for the locally available data
+  sets.</A>
+<LI><A NAME="tex2html268"
+  HREF="node12.html#SECTION000120020000000000000">Including new raster data sets.</A>
+<LI><A NAME="tex2html269"
+  HREF="node12.html#SECTION000120030000000000000">Including new polygon data sets.</A>
+<LI><A NAME="tex2html270"
+  HREF="node12.html#SECTION000120040000000000000">Last resort.</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000120000000000000000">
+Modifying iGMT</A>
+</H1>
+
+<P>
+iGMT may be freely modified and distributed as long as modified
+version are not called iGMT. There are plenty of easy possible future
+enhancements one could think of, for instance interactive design of
+colormaps, support of more complicated user data sets and multiple
+layers of raster data. When this
+extensions become available, they will be included in future
+versions. Some common modification (as opposed to extension or
+enhancement) tasks are described below:
+
+<P>
+
+<H4><A NAME="SECTION000120010000000000000">
+Using other path names for the locally available data
+  sets.</A>
+</H4> This is easily done when its still the same format than the
+supported raster and polygon data sets, just change the pathnames in
+<TT>igmt_configure.tcl</TT> or in your <TT>igmt_siteconfig.tcl</TT> file.
+
+<P>
+
+<H4><A NAME="SECTION000120020000000000000">
+Including new raster data sets.</A>
+</H4> Make sure that the data is
+in one of the formats that can be read by <TT>grdraster</TT>, <TT>  img2latlongrd</TT> or <TT>grdimage</TT> itself. Then include a new global
+path variable and raster data settings in <TT>  igmt_configure.tcl</TT>/<TT>igmt_siteconfig.tcl</TT>  as
+was done for instance for the gravity data. Next, include a new point
+in the menu in the <TT>igmt_menus.tcl</TT> file after the old ones that
+lets you choose your new data file instead of the old ones. Last, add
+some new plotting commands in <TT>igmt_plotting.tcl</TT>. With some
+familiarity with UNIX and GMT this should be easily done by
+``cut-and-paste'' with the default data sets as examples.
+
+<P>
+
+<H4><A NAME="SECTION000120030000000000000">
+Including new polygon data sets.</A>
+</H4> In principle, this works
+the same way than for raster data with the exception that polygon data
+can be multi-layer and you need to introduce another global variable
+in <TT>igmt_configure.tcl</TT>. How to do this should be evident when
+the custom xys files 1 and 2 are taken as an example. 
+
+<P>
+
+<H4><A NAME="SECTION000120040000000000000">
+Last resort.</A>
+</H4> Contact Thorsten Becker (<TT>becker@eps.harvard.edu</TT>)
+or Alexander Braun
+<BR>(<TT>braun@gfz-potsdam.de</TT>).
+
+<P>
+<HR>
+<A NAME="tex2html265"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/next.gif"></A> 
+<A NAME="tex2html261"
+  HREF="igmt_man.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/up.gif"></A> 
+<A NAME="tex2html255"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/prev.gif"></A> 
+<A NAME="tex2html263"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/home/GFZS1/gnu/l2h/icons/contents.gif"></A>  <BR>
+<B> Next:</B> <A NAME="tex2html266"
+  HREF="node13.html">About this document ...</A>
+<B>Up:</B> <A NAME="tex2html262"
+  HREF="igmt_man.html">iGMT: Interactive Mapping of</A>
+<B> Previous:</B> <A NAME="tex2html256"
+  HREF="node11.html">Technical details</A>
+
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I><A HREF="mailto:braun@gfz-potsdam.de"> Alexander Braun</A><I>
+<A HREF="mailto:beck
+er@eps.harvard.edu">,  Thorsten W. Becker</A>, last update on 
+2000-05-12</I>
+<IMG ALIGN=TOP width=110 ALT="iGMT-logo" SRC="igmt_new.gif" > 
+</ADDRESS>
+</BODY>
+</HTML>
