@@ -1,2 +1,2 @@
-set rasterpath "/home/walter/twb/data"
+set rasterpath "/home/twb/data"
 

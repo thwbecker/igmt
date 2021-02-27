@@ -695,8 +695,8 @@ proc mk_ps {} {
 		set nrs [ add_to_script  $nrs gmtstring "\$gmtbin/gmtset LABEL_FONT_SIZE $tmpstring"]
 	    }
 	}
-	"12" { # ETOPO2 topography data from grd file
-            puts "iGMT: ETOPO2 topography, resolution  $inc, max is $raster_bounds(12,6) m"
+	"12" { # ETOPO1 topography data from grd file
+            puts "iGMT: ETOPO1 topography, resolution  $inc, max is $raster_bounds(12,6) m"
 	    version_dependent_strings   "m"  scale_unit_string 
 	    set nrs [ create_temp_grid $nrs gmtstring "topo" \
 			  $raster_data(12)  $data_region $resample $inc \

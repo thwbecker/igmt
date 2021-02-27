@@ -31,7 +31,7 @@ proc choose_raster_datasets { masterwindow } {
 	-relief flat -variable raster_dataset -value 1  
     radiobutton .crd.up.r2 -text "Topography and Bathymetry\nETOPO5" -relief flat \
 	-variable raster_dataset -value 2  
-    radiobutton .crd.up.r12 -text "Topography and Bathymetry\nETOPO2" -relief flat \
+    radiobutton .crd.up.r12 -text "Topography and Bathymetry\nETOPO1" -relief flat \
 	-variable raster_dataset -value 12  
     radiobutton .crd.up.r3 -text "Topography and Bathymetry\nGTOPO30 (Smith & Sandwell 1997)" \
 	-relief flat -variable raster_dataset -value 3  

@@ -77,7 +77,7 @@ set lower_version_gmtbins "/usr/local/src/GMT3.4.5/bin/"
 # if you want, supply different binary location as a function of the
 # version number, changes when version is higher than $gmt_version_boundary
 
-set higher_version_gmtbins "/home/walter/twb/progs/src/gmt-4.5.18//bin//"
+set higher_version_gmtbins "/home/twb/progs/src/gmt-4.5.18//bin//"
 #set higher_version_gmtbins "/usr/bin/"
 
 # in igmt.tcl, gmtbins will be set to either path depending on the chosen
@@ -189,7 +189,7 @@ set psviewer_command_landscape "$psviewer -orientation=portrait"
 # PS to GIF converter
 #
 #
-set ps_to_gif_converter "convert"
+set ps_to_gif_converter "/usr/bin/convert"
 
 # if silly error messages give you a hard time, set this to unity
 # if you want error message checking, leave it at zero 
@@ -481,11 +481,11 @@ set  raster_bounds(10,5) 1
 
 
 ################################################################################
-# R12: ETOPO2 topography data as grid file
-set raster_data(12) "\$rasterpath/etopo2/etopo2.grd"
+# R12: ETOPO1 topography data as grid file
+set raster_data(12) "\$rasterpath/etopo1/ETOPO1_Bed_g_gmt4.grd"
 set raster_colormap(12) $raster_colormap(2)
 # resolution limit in minutes
-set  raster_bounds(12,6) 2
+set  raster_bounds(12,6) 1
 
 
 
