@@ -161,7 +161,8 @@ set parameter_file_format 1.2
 
 # postscript viewer
 
-set psviewer "ghostview"
+#set psviewer "ghostview"
+set psviewer "gv"
 
 
 # command line for viewing a postscript file in portrait orientation

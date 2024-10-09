@@ -760,7 +760,7 @@ proc mk_ps {} {
 	    set line "$our_awk '{if((substr(\$1,1,1)!=\"\#\")&&(\$1!=\"\"))printf(\"%g %g %g %g %g %s %s\\n\",\$5-$tagdist*$maxmap,\$4,11,0,15,\"BR\",\$1)}'"
 	    set line "$line \\\n\t $poly_data(7) | \\\n\t"
 	    set line "$line \$gmtbin/pstext \$region \$projection"
-	    add_scolor_string line poly_color 7 
+	    add_pstext_color_string line poly_color 7 
 	    set line "$line -O -K >> \$ps_filename\n"
 	    set nrs [ add_to_script  $nrs gmtstring "$line" ]
 	}
@@ -784,7 +784,7 @@ proc mk_ps {} {
 	    set line "$line $our_awk '{la=\$1;lo=\$3;if(\$2==\"S\")la*=-1;if(\$4==\"W\")lo*=-1;print(lo,la,\$5,\$6,\$7,\$8)}'|\\\n\t"
 	    set line "$line $our_awk '{print(\$1-0.08*$maxmap,\$2,11,0,15,3,\$3,\$4,\$5,\$6)}'| \\\n\t"
 	    set line "$line \$gmtbin/pstext \$region \$projection"
-	    add_scolor_string line poly_color 8 
+	    add_pstext_color_string line poly_color 8 
 	    set line "$line  -O -K >> \$ps_filename\n"
 	    set nrs [ add_to_script  $nrs gmtstring "$line" ]
 	}
@@ -919,7 +919,7 @@ proc mk_ps {} {
 	    set line "$our_awk '{if((substr(\$1,1,1)!=\"\#\")&&(\$1!=\"\"))printf(\"%g %g %g %g %g %s %s\\n\",\$1-$tagdist*$maxmap,\$2,11,0,15,\"BR\",\$3)}'"
 	    set line "$line \\\n\t  $poly_data($city_code) | \\\n\t"
 	    set line "$line \$gmtbin/pstext \$region \$projection"
-	    add_scolor_string line poly_color 12
+	    add_pstext_color_string line poly_color 12
 	    set line "$line -O -K >> \$ps_filename\n"
 	    set nrs [ add_to_script  $nrs gmtstring "$line" ]
 	}
@@ -1419,6 +1419,13 @@ proc add_scolor_string { ref_line pc i } {
     upvar $ref_line line
     upvar $pc poly_color
     set line "$line -G[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)]"
+}
+
+# add a string with a color specification for GMT6 pstext 
+proc add_pstext_color_string { ref_line pc i } {
+    upvar $ref_line line
+    upvar $pc poly_color
+    set line "$line -F+f[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)]"
 }
 #
 # add a string with a fill color specification if symbols are chose
