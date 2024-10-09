@@ -729,7 +729,7 @@ proc mk_ps {} {
     if { $polygon_dataset(1)  } { 
 	set nrs [ add_to_script  $nrs gmtstring "\# Add NUVEL1 plate boundaries to the plot." ]
 	set line "\$gmtbin/psxy $poly_data(1) -: \$verbose \\\n\t"
-	set line "$line -M \$region \$projection -O -K  "
+	set line "$line -m \$region \$projection -O -K  "
 	add_linetype_string  line poly_linewidth poly_color 1 
 	set line "$line   >> \$ps_filename\n"
 	set nrs [ add_to_script  $nrs gmtstring "$line" ] 
@@ -739,7 +739,7 @@ proc mk_ps {} {
     if { $polygon_dataset(9)  } { 
 	set nrs [ add_to_script  $nrs gmtstring "\# Add slab contours to the plot." ]
 	set line "\$gmtbin/psxy $poly_data(9)  \$verbose \\\n\t"
-	set line "$line -M \$region \$projection -O -K  "
+	set line "$line -m \$region \$projection -O -K  "
 	add_linetype_string  line poly_linewidth poly_color 9
 	set line "$line   >> \$ps_filename\n"
 	set nrs [ add_to_script  $nrs gmtstring "$line" ] 
@@ -1446,9 +1446,9 @@ proc add_scolor_symb_string { ref_line pc ps pss ms use_fix_size i } {
 	#
 	set lw [ format %0i [ expr int($poly_symbol_size($i)/0.05) ] ]p
 	if { $poly_symbol($i) == "-Lo" } { # non-filled lines
-	    set line "$line -W$lw/[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)] -M"
+	    set line "$line -W$lw/[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)] -m"
 	} elseif {  $poly_symbol($i) == "-Lc" } {
-	    set line "$line -G[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)] -L -M"
+	    set line "$line -G[format %03i/%03i/%03i $poly_color($i,1) $poly_color($i,2) $poly_color($i,3)] -L -m"
 	}
     }
 }
