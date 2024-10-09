@@ -3,11 +3,10 @@
 #
 # part of the iGMT package
 #
-# $Id: igmt.tcl,v 1.8 2004/03/23 17:41:10 becker Exp becker $ 
 #
 ################################################################################
 #
-#                                  iGMT, version 1.2
+#                                  iGMT, version 1.2.1
 #
 # graphical user interface for the GMT tools
 # interface to various datasets 
@@ -50,9 +49,9 @@ if { $gmt_version >= $gmt_version_boundary } {
 
 # check the availability of at least one GMT command
 
-if { [catch "[ list exec [ format %sgmtdefaults $gmtbins ] -D > /dev/null ]" var ] } {
+if { [catch "[ list exec [ format %s gmtdefaults $gmtbins ] -D > /dev/null ]" var ] } {
     puts $var
-    puts "iGMT: Can't execute \"[ format %sgmtdefaults $gmtbins ]\" !"
+    puts "iGMT: Can't execute \"[ format %s gmtdefaults $gmtbins ]\" !"
     puts "iGMT: The GMT commands are probably in the wrong place"
     puts "iGMT: or not in your path."
     puts "iGMT: Modify $igmt_root/igmt_configure.tcl, "
@@ -79,7 +78,7 @@ if { [ catch "[ list exec $shell_to_use -c "type $gmtbins/img2grd" ]" var ] } {
 if { [ catch "[ list exec $shell_to_use -c "type $gmtbins/psvelo" ]" var ] } {
     puts "iGMT: error"
     puts $var
-    puts "iGMT: Can't find \"[ format %spsvelo $gmtbins ]\" !"
+    puts "iGMT: Can't find \"[ format %s psvelo $gmtbins ]\" !"
     puts "iGMT: "
     puts "iGMT: Did you or your sysadmin remember to install the GMT meca tools?"
     puts "iGMT: Those are needed to plot CMT solutions and GPS velocities,"
@@ -89,19 +88,19 @@ if { [ catch "[ list exec $shell_to_use -c "type $gmtbins/psvelo" ]" var ] } {
 
 
 
-#  if gmtbins is not set, request the general path
-if { $gmtbins == "" } {
-    if { [ catch "[ list exec $shell_to_use -c "type gmtdefaults" ]" gmtbins ] } {
-	# could not automatically determine the binary location
-	puts "iGMT: Could not determine the pathname of the GMT binaries."
-	puts "iGMT: Please find out where binaries such as pscoast reside"
-	puts "iGMT: (type \"which pscoast\" for example) and add a line like"
-	puts "iGMT: set gmtbins /the/directory/of/GMT/bin/"
-	puts "iGMT: to your igmt_siteconfig.tcl file. Then restart."
-	exit -1
-    }
-    set gmtbins [ string range $gmtbins 0 [ expr [ string length $gmtbins ] - 13 ]  ]
-}
+# #  if gmtbins is not set, request the general path
+# if { $gmtbins == "" } {
+#     if { [ catch "[ list exec $shell_to_use -c "type gmtdefaults" ]" gmtbins ] } {
+# 	# could not automatically determine the binary location
+# 	puts "iGMT: Could not determine the pathname of the GMT binaries."
+# 	puts "iGMT: Please find out where binaries such as pscoast reside"
+# 	puts "iGMT: (type \"which pscoast\" for example) and add a line like"
+# 	puts "iGMT: set gmtbins /the/directory/of/GMT/bin/"
+# 	puts "iGMT: to your igmt_siteconfig.tcl file. Then restart."
+# 	exit -1
+#     }
+#     set gmtbins [ string range $gmtbins 0 [ expr [ string length $gmtbins ] - 13 ]  ]
+# }
 
 set convert_availability [catch "[ list exec $shell_to_use -c "type $ps_to_gif_converter" ] " tmp_var ]
 if { ( $convert_availability ) || ( [ string range $tmp_var  0 1 ] == "no") } {

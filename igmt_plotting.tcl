@@ -1103,7 +1103,7 @@ proc mk_ps {} {
 	set nrs [ add_to_script  $nrs gmtstring "\#rm -f  $filestring 2> /dev/null" ]
     }
 
-
+    set nrs [ add_to_script  $nrs gmtstring "\$gmtbin/psconvert -Te -A+m0.1 \$ps_filename -Ftmp.$$ ; mv tmp.$$.eps \$ps_filename\n"]
     set nrs [ add_to_script  $nrs gmtstring "\$gmtbin/gmtset PAPER_MEDIA \$old_psize\n"]
     
     ################################################################################

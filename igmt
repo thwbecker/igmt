@@ -1,0 +1,96 @@
+#!/bin/bash
+################################################################################
+#
+#
+# Startup script for iGMT, see igmt.tcl for comments and COPYRIGHT
+# for a short description of the iGMT software and license.
+#
+#
+################################################################################
+
+################################################################################
+# default location of the  iGMT distribution
+#
+# set an enrionment variable or change the setting here
+#
+if test "$igmt_root" = ""; then
+	igmt_root=$HOME/progs/src/igmt_develop
+	export igmt_root
+fi
+if [ ! -r $igmt_root/igmt.tcl ] 
+then
+		echo
+		echo "iGMT: Couldn't read the main script file \"igmt.tcl\""
+		echo "iGMT: This could either mean that \"$igmt_root\""
+		echo "iGMT: is not the place where the iGMT distribution"	
+		echo "iGMT: was put, or the permissions are not properly set."
+		echo "iGMT: Change the default location of the iGMT distribution"
+		echo "iGMT: in this startup script (try \"which igmt\" to find out"
+		echo "iGMT: where I am) in line 18."
+		echo
+		exit
+fi
+if [ ! -x $igmt_root/igmt_helper_checkfile ] 
+then 
+		echo
+		echo "iGMT: \"$igmt_root/igmt_helper_checkfile\""
+		echo "iGMT: is either not there or not executable. Maybe your "
+		echo "iGMT: iGMT distribution is corrupted or the permissions"
+		echo "iGMT:  are not properly set."
+		echo "iGMT: \"ls -l $igmt_root/igmt_helper_checkfile\" "
+		echo "iGMT: should give you something like:"
+		id -g |	read gid 
+		echo "iGMT: \"-rwxr-x---    1 $USER   $gid           80 Apr 13 16:55 $igmt_root/igmt_helper_checkfile\""
+		echo
+		exit
+fi
+
+
+# where is the tcl shell? Either set an environment variable 
+# or change the path here
+
+if test "$wish_cmd" = ""; then
+#	wish_cmd=/usr/local/bin/wish
+	wish_cmd=/usr/bin/wish
+fi
+if [ ! -x $wish_cmd ] 
+then
+		echo
+	        echo "iGMT: The Tcl/Tk shell program \"wish\" "
+		echo "iGMT: is not executable or could not be found."
+		echo "iGMT: Please make sure that Tcl/Tk8.0+ is installed and"
+		echo "iGMT: \"wish\" is identical to the current setting, "
+	        echo "iGMT: \"$wish_cmd\","
+		echo "iGMT: and executable (i.e. in your \$path variable.)"
+		echo "iGMT: Change the default place where iGMT looks for \"wish\""
+		echo "iGMT: in the \"$igmt_root/igmt\" startup script,"
+		echo "iGMT: line 74, or set an environment variable \$wish_cmd."
+		echo "iGMT: csh user would use: \"setenv wish_cmd /my/location/wish\"."
+		echo "iGMT: The tcl sources that come with this disstribution"
+		echo "iGMT: have been tested with Tcl/Tk version 8.0. Earlier"
+		echo "iGMT: releases might work as well."	
+		echo
+		exit
+fi
+
+
+
+echo "iGMT: Version 1.2.1, AAAAAAAA"
+echo "iGMT: See \"About iGMT\" for help and copyright."
+
+# try to make sure that the temporary files are actually
+# erased 
+
+
+trap "rm -f /tmp/igmt_$USER_* ; exit" EXIT
+
+
+
+# make sure pwd is the current working directory
+# Stephen Galer
+
+export PWD=`pwd`
+
+# start iGMT using wish
+
+exec $wish_cmd  $igmt_root/igmt.tcl 

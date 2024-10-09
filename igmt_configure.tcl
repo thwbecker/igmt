@@ -58,7 +58,8 @@ if { ( [ catch { set user $env(USER) } ] ) || ( $user == "" ) } {
 # also make sure that the $GMTHOME variable is set 
 #
 #set gmt_version 3.4
-set gmt_version 4.5.18
+#set gmt_version 4.5.18
+set gmt_version 6
 
 # this is the boundary between older and newer versions of GMT
 # if you have set gmt_version to anything larger or equal that 
@@ -66,6 +67,9 @@ set gmt_version 4.5.18
 # - search for GMT binaries in the higher version directory (see below)
 #
 set gmt_version_boundary 4.0
+
+# for swith to 6
+set gmt_upper_version_boundary 5
 
 # set gmtbins to the path of the gmt commands if they are not in
 # the shell search path, else use ""
@@ -77,7 +81,8 @@ set lower_version_gmtbins "/usr/local/src/GMT3.4.5/bin/"
 # if you want, supply different binary location as a function of the
 # version number, changes when version is higher than $gmt_version_boundary
 
-set higher_version_gmtbins "/home/twb/progs/src/gmt-4.5.18//bin//"
+#set higher_version_gmtbins "/home/walter/twb/progs/src/gmt-4.5.18//bin//"
+set higher_version_gmtbins "/home/twb/progs/src/gmt/build_laptop/bin/"
 #set higher_version_gmtbins "/usr/bin/"
 
 # in igmt.tcl, gmtbins will be set to either path depending on the chosen
@@ -219,7 +224,7 @@ set colorpath "$igmt_root/colormaps"
 #
 # principal base directory for raster data 
 #
-set rasterpath "/home/walter/becker/data"
+set rasterpath "/home/walter/twb/data"
 
 
 ################################################################################

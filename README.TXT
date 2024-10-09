@@ -1,6 +1,6 @@
 ################################################################################
 
-			iGMT version 1.2 (AAAAAAAA)
+			iGMT version 1.2.1 (AAAAAAAA)
 
 		Interactive Mapping of Geoscientific Datasets
 
@@ -15,10 +15,10 @@ Clicking on "Map it!" when running iGMT produces a GMT script whose
 postscript output is converted and displayed as a GIF image.  Find a
 description of the software usage in the "manual.ps" file that should
 have come with the distribution ("Display manual") or refer to the
-iGMT web site
+iGMT web site and GitHub
 
-		   http://www-udc.ig.utexas.edu/external/becker/igmt/
-				   
+     	 http://www-udc.ig.utexas.edu/external/becker/igmt/
+		https://github.com/thwbecker/igmt		   
 Main authors:
 	
 			  Thorsten W. Becker 
@@ -27,8 +27,8 @@ Main authors:
 				 and
 
 			   Alexander Braun
-			University of Calgary
-			   Calgary, Canada
+			  Queens University
+			   Kingston OT, Canada
 
 				   
    Includes contributions of Simon McClusky (MIT, USA) and others.
